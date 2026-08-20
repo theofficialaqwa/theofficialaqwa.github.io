@@ -43,6 +43,10 @@ img {
     align-items: center;
 }
 
+.navbar .container .logo { /* container in navbar */
+    max-width: 25%;
+}
+
 .navbar .main-menu ul {
     display: flex;
 }
