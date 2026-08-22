@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/portfolio.css">
 </head>
 <body>
     <nav class="navbar">
@@ -20,16 +21,16 @@
             <div class="main-menu">
                 <ul>
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="#top-of-page">Home</a>
                     </li>
                     <li>
-                        <a href="index.html">Portfolio</a>
+                        <a href="#portfolio">Portfolio</a>
                     </li>
                     <li>
-                        <a href="index.html">About</a>
+                        <a href="#about">About</a>
                     </li>
                     <li>
-                        <a href="index.html">Contact</a>
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -57,39 +58,72 @@
         </div>
     </nav>
     <!-- Home Section-->
-     <section class="hero">
+    <section id="home" class="home">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-heading text-xxl">
+            <div class="home-content">
+                <h1 class="home-heading text-xxl">
                     Hi there! I'm AQWA
                 </h1>
-                <p class="hero-text">
+                <p class="home-text">
                     I'm passionate web developer and designer dedicated to creating exceptional digital experiences.
                 </p>
             </div>
         </div>
      </section>
      <!-- Portfolio Section -->
-      <section class="video bg-black">
-        <div class="container-sm">
-            <h2 class="video-heading text-xl text-center">
-                See how it works and get started in less than 2 minutes
-            </h2>
-            <div class="video-content">
-                <a href="#">
-                    <img src="images/Desktop/Video.png" alt="video" class="video-preview" />
-                </a>
-                <a href="#" class="btn btn-primary">Get Started</a>
-            </div>
+    <section id="portfolio">
+        <div class="portfolio-container">
+    
+    <!-- TOPIC CONTAINER FRAME -->
+        <div class="project-topic">
+            <h2>topic</h2>
         </div>
-      </section>
+    
+    <!-- MAIN WORKSPACE ROWS (SPLITS LEFT MEDIA FROM RIGHT DETAILS) -->
+        <div class="project-content-grid">
+      
+      <!-- LEFT BOX LAYER: TRI-IMAGE COMPOUND LAYOUT -->
+            <div class="media-block">
+                <div class="main-formal-pic">
+                    <img src="images/Desktop/post 3/gambar bersama TUAN2.jpg"/>
+                </div>
+                <div class="sub-pic-row">
+                    <img src="images/Desktop/post 3/gambar bersama intake 8 troll.jpg"/>
+                    <img src="images/Desktop/post 3/IMG_20260816_082400.jpg.jpeg" class="pic-box"/>
+                </div>
+            </div>
+      
+      <!-- RIGHT BOX LAYER: CASE STUDY NARRATIVE FEED -->
+            <div class="text-block">
+                <div class="project-details">
+                    <p>What are the topic</p>
+                    <p>Why im there</p>
+                    <p>Few skills</p>
+                    <p>How would i rate</p>
+                </div>
+                <button class="show-more-btn">Show more</button>
+            </div>
+
+        </div>
+    
+    <!-- SLIDESHOW BUTTON TRACKS -->
+<div class="slider-controls">
+  <button class="arrow-btn">&lt;</button>
+  
+  <!-- Leave this container COMPLETELY EMPTY; JavaScript will automatically inject the exact number of circles needed! -->
+  <div class="nav-dots"></div>
+
+  <button class="arrow-btn">&gt;</button>
+</div></div>
+</section>
+
       <!-- About Section -->
-       <section class="testimonials bg-dark">
+       <section id="about" class="about bg-dark">
         <div class="container">
-            <h3 class="testimonials-heading text-xl">
+            <h3 class="about-heading text-xl">
                 Don't just take our word for it, see the success  stories from businesses just like yours.
             </h3>
-            <div class="testimonials-grid">
+            <div class="about-grid">
                 <div class="card">
                     <p>
                         “Our business has seen a significant increase in productivity since we started using the Growth app.”
@@ -117,182 +151,8 @@
             </div>
         </div>
        </section>
-
-       <!-- Pricing -->
-        <section class="pricing">
-            <div class="container-sm">
-                <h3 class="pricing-heading text-xl text-center">
-                    Pricing
-                </h3>
-                <p class="pricing-subheading text-md text-center">
-                    Start free and scale while you grow. No hidden fees. Unlimited users for free.
-                </p>
-                <div class="pricing-grid">
-                    <!-- Pricing Card 1 -->
-                     <div class="card bg-light">
-                        <div class="pricing-card-header">
-                            <h4 class="pricing-heading text-xl">
-                                Simple
-                            </h4>
-                            <p class="pricing-card-subheading">
-                                Keep track of your contacts, gain valuable insights, analyse live data and performance metrics.
-                            </p>
-                            <p class="pricing-card-price">
-                                <span class="text-xl">Free</span>
-                                *No credit card needed
-                            </p>
-                        </div>
-                        <div class="pricing-card-body">
-                            <ul>
-                                <li>
-                                    <i class="fas fa-check"></i> Real-Time Monitoring
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> Track key performance indicators
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> Schedule appointments
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> Organize, delegate and eep track of tasks
-                                </li>
-                            </ul>
-                            <a href="#" class="btn btn-primary btn-block">Get Started</a>
-                        </div>
-                     </div>
-                        <!-- Pricing Card 2 -->
-                     <div class="card bg-black">
-                        <div class="pricing-card-header">
-                            <h4 class="pricing-heading text-xl">
-                                Premium
-                            </h4>
-                            <p class="pricing-card-subheading">
-                                Keep track of your contacts, gain valuable insights, analyse live data and performance metrics.
-                            </p>
-                            <p class="pricing-card-price">
-                                <span class="text-xl">RM49</span>
-                                /Month
-                            </p>
-                        </div>
-                        <div class="pricing-card-body">
-                            <p>Everything from the free plan plus:</p>
-                            <ul>
-                                <li>
-                                    <i class="fas fa-check"></i> Data-driven decisions
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> Data visualisation
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> Schedule appointments
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> Store and organise contact information
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> Teal-time communication tools for messaging and video conferencing
-                                </li>
-                            </ul>
-                            <a href="#" class="btn btn-primary btn-block">Get Started</a>
-                        </div>
-                     </div>
-                </div>
-                <p class="pricing-footer text-center">
-                    All prices are in USD and charged per month with applicable taxes added at checkout.
-                </p>
-            </div>
-        </section>
-
-        <!-- FAQ -->
-         <section class="faq bg-light">
-            <div class="container-sm">
-                <h3 class="text-xl text-center">
-                    Frequently Asked Question
-                </h3>
-                <ul class="faq-menu">
-                    <li class="active">All</li>
-                    <li>Getting Started</li>
-                    <li>Pricing</li>
-                </ul>
-                <div class="faq-content">
-                    <div class="faq-group">
-                        <div class="faq-group-header">
-                            <h4 class="text-md">
-                                How does the contact management feature help me keep track of clients and partners?
-                            </h4>
-                            <i class="fas fa-minus"></i>
-                        </div>
-                        <div class="faq-group-body open">
-                            <p>Keep track of your contacts, gain valuable insights, analyse live data and performance metrics.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq-group">
-                        <div class="faq-group-header">
-                            <h4 class="text-md">
-                                How does the contact management feature help me keep track of clients and partners?
-                            </h4>
-                            <i class="fas fa-plus"></i>
-                        </div>
-                        <div class="faq-group-body">
-                            <p>Keep track of your contacts, gain valuable insights, analyse live data and performance metrics.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq-group">
-                        <div class="faq-group-header">
-                            <h4 class="text-md">
-                                How does the contact management feature help me keep track of clients and partners?
-                            </h4>
-                            <i class="fas fa-plus"></i>
-                        </div>
-                        <div class="faq-group-body">
-                            <p>Keep track of your contacts, gain valuable insights, analyse live data and performance metrics.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq-group">
-                        <div class="faq-group-header">
-                            <h4 class="text-md">
-                                How does the contact management feature help me keep track of clients and partners?
-                            </h4>
-                            <i class="fas fa-plus"></i>
-                        </div>
-                        <div class="faq-group-body">
-                            <p>Keep track of your contacts, gain valuable insights, analyse live data and performance metrics.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq-group">
-                        <div class="faq-group-header">
-                            <h4 class="text-md">
-                                How does the contact management feature help me keep track of clients and partners?
-                            </h4>
-                            <i class="fas fa-plus"></i>
-                        </div>
-                        <div class="faq-group-body">
-                            <p>Keep track of your contacts, gain valuable insights, analyse live data and performance metrics.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq-group">
-                        <div class="faq-group-header">
-                            <h4 class="text-md">
-                                How does the contact management feature help me keep track of clients and partners?
-                            </h4>
-                            <i class="fas fa-plus"></i>
-                        </div>
-                        <div class="faq-group-body">
-                            <p>Keep track of your contacts, gain valuable insights, analyse live data and performance metrics.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-         </section>
-
          <!-- Footer -->
-          <footer class="footer bg-black">
+          <footer id="contact" class="footer bg-black">
             <div class="container">
                 <div class="footer-grid">
                     <div>
@@ -344,5 +204,6 @@
           </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/portfolio.js"></script>
 </body>
 </html>

@@ -1,45 +1,30 @@
-// FAQ Accordion
-document.addEventListener('DOMContentLoaded', () => {
-    const faqContainer = document.querySelector('.faq-content');
+// --- COMPACT SLIDE DOWN MENU FOR DESKTOP ---
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll(".navbar a[href^='#']");
 
-    faqContainer.addEventListener('click', (e) => {
-        const groupHeader = e.target.closest('.faq-group-header');
+  navLinks.forEach(link => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault(); // Stop the instant browser jump
 
-        if(!groupHeader) return;
+      const targetId = link.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
 
-        const group = groupHeader.parentElement;
-        const groupBody = group.querySelector('.faq-group-body');
-        const icon = groupHeader.querySelector('i');
+      // Look inside your existing link click function and update it to this:
+if (targetSection) {
+  targetSection.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+} else if (targetId === "#top-of-page") {
+  // FIX: If the code cannot find a section, but the link is #top-of-page, force the window to the true top
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
 
-        // Toggle icon minus/plus
-        icon.classList.toggle('fa-plus');
-        icon.classList.toggle('fa-minus');
-
-        // Toggle visibility of body
-        groupBody.classList.toggle('open');
-
-        // Close other open FAQ bodies
-        const otherGroups = faqContainer.querySelectorAll('.faq-group');
-
-        otherGroups.forEach((otherGroups) => {
-            if(otherGroups !== group){
-                const otherGroupBody = otherGroups.querySelector('.faq-group-body');
-                const otherIcon = otherGroups.querySelector('.faq-group-header i');
-
-                otherGroupBody.classList.remove('open');
-                otherIcon.classList.remove('fa-minus');
-                otherIcon.classList.add('fa-plus');
-            }
-        });
     });
+  });
 });
 
-// Mobile Menu
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburgerButton = document.querySelector('.hamburger-button');
-    const mobileMenu = document.querySelector('.mobile-menu');
-
-    hamburgerButton.addEventListener('click', () => 
-        mobileMenu.classList.toggle('active')
-    );
-});
+// --- Keep your FAQ Accordion and Mobile Menu code below this line ---
