@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (textDetailsParagraphs.length >= 4) {
       textDetailsParagraphs[0].innerHTML = `<strong>What are the topic:</strong> ${project.topic}`;
-      textDetailsParagraphs[1].innerHTML = `<strong>Why im there:</strong> ${project.whyImThere}`;
+      textDetailsParagraphs[1].innerHTML = `<strong>Why im there with question:</strong> ${project.whyImThere}`;
       textDetailsParagraphs[2].innerHTML = `<strong>Few skills:</strong> ${project.skills}`;
       textDetailsParagraphs[3].innerHTML = `<strong>How would i rate:</strong> ${project.rating}`;
     }
