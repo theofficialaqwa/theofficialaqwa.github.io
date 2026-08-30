@@ -3,206 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>AQWA | Portfolio</title>
     <link rel="icon" type="image/x-icon" href="images/icon/homepage.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cloudflare.com" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/portfolio.css">
 </head>
 <body>
+    <!-- True Absolute Top Anchor for the Home Navigation link -->
+    <div id="top-of-page"></div>
+
+    <!-- ==========================================================================
+         FIXED NAVIGATION BAR
+         ========================================================================== -->
     <nav class="navbar">
         <div class="container">
             <div class="logo">
+                <!-- Your AQWA logo artwork goes here -->
             </div>
 
+            <!-- Cleaned Desktop Menu Links -->
             <div class="main-menu">
                 <ul>
-                    <li>
-                        <a href="#top-of-page">Home</a>
-                    </li>
-                    <li>
-                        <a href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
+                    <li><a href="#top-of-page">Home</a></li>
+                    <li><a href="#portfolio">Project</a></li>
+                    <li><a href="#activities">Activities</a></li>
+                    <li><a href="#timeline">Timeline</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-            <!-- Hamburger Button -->
-             <button id="hamburger-button" class="hamburger-button">
+
+            <!-- Hamburger Button for Mobile Views -->
+            <button id="hamburger-button" class="hamburger-button">
                 <div class="hamburger-line"></div>
                 <div class="hamburger-line"></div>
                 <div class="hamburger-line"></div>
-             </button>
-             <div class="mobile-menu">
+            </button>
+
+            <!-- Cleaned Mobile Slide Menu Links -->
+            <div class="mobile-menu">
                 <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">Skills</a>
-                    </li>
-                    <li>
-                        <a href="#">Timeline</a>
-                    </li>
-                    <li>
-                    </li>
+                    <li><a href="#top-of-page">Home</a></li>
+                    <li><a href="#portfolio">Project</a></li>
+                    <li><a href="#activities">Activities</a></li>
+                    <li><a href="#timeline">Timeline</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-             </div>
+            </div>
         </div>
     </nav>
-    <!-- Home Section-->
+
+    <!-- ==========================================================================
+         SLIDE 1: HOME SECTION
+         ========================================================================== -->
     <section id="home" class="home">
         <div class="container">
             <div class="home-content">
-                <h1 class="home-heading text-xxl">
-                    Hi there! I'm AQWA
-                </h1>
+                <h1 class="home-heading text-xxl">Hi there! I'm AQWA</h1>
                 <p class="home-text">
-                    I'm passionate web developer and designer dedicated to creating exceptional digital experiences.
+                    I'm a passionate web developer and designer dedicated to creating exceptional digital experiences.
                 </p>
             </div>
         </div>
-     </section>
-     <!-- Portfolio Section -->
+    </section>
+
+    <!-- ==========================================================================
+         SLIDE 2: PROJECT / PORTFOLIO SECTION (Kept Exactly Like Before)
+         ========================================================================== -->
     <section id="portfolio">
         <div class="portfolio-container">
-    
-    <!-- TOPIC CONTAINER FRAME -->
-        <div class="project-topic">
-            <h2>topic</h2>
-        </div>
-    
-    <!-- MAIN WORKSPACE ROWS (SPLITS LEFT MEDIA FROM RIGHT DETAILS) -->
-        <div class="project-content-grid">
-      
-      <!-- LEFT BOX LAYER: TRI-IMAGE COMPOUND LAYOUT -->
-            <div class="media-block">
-                <div class="main-formal-pic">
-                    <img src="images/Desktop/post 3/gambar bersama TUAN2.jpg"/>
+            <div class="project-topic">
+                <h2>topic</h2>
+            </div>
+            
+            <div class="project-content-grid">
+                <!-- Left Column Layout: Tri-Image Display Container -->
+                <div class="media-block">
+                    <div class="main-formal-pic">
+                        <img src="images/Desktop/post 3/gambar bersama TUAN2.jpg" alt="Project Cover" />
+                    </div>
+                    <div class="sub-pic-row">
+                        <img src="images/Desktop/post 3/gambar bersama intake 8 troll.jpg" alt="Sub Preview 1" />
+                        <img src="images/Desktop/post 3/IMG_20260816_082400.jpg.jpeg" class="pic-box" alt="Sub Preview 2" />
+                    </div>
                 </div>
-                <div class="sub-pic-row">
-                    <img src="images/Desktop/post 3/gambar bersama intake 8 troll.jpg"/>
-                    <img src="images/Desktop/post 3/IMG_20260816_082400.jpg.jpeg" class="pic-box"/>
+          
+                <!-- Right Column Layout: Description and Case-Study Direct Button -->
+                <div class="text-block">
+                    <div class="project-details">
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <button class="show-more-btn">Show more</button>
                 </div>
             </div>
-      
-      <!-- RIGHT BOX LAYER: CASE STUDY NARRATIVE FEED -->
-            <div class="text-block">
-                <div class="project-details">
-                    <p>What are the topic</p>
-                    <p>Why im there and why it fun</p>
-                    <p>Few skills that need to write</p>
-                    <p>How would i rate</p>
-                </div>
-                <button class="show-more-btn">Show more</button>
+        
+            <!-- Dynamic Navigation Circles Track Frame -->
+            <div class="slider-controls">
+                <button class="arrow-btn">&lt;</button>
+                <div class="nav-dots"></div>
+                <button class="arrow-btn">&gt;</button>
             </div>
-
         </div>
-    
-    <!-- SLIDESHOW BUTTON TRACKS -->
-<div class="slider-controls">
-  <button class="arrow-btn">&lt;</button>
-  
-  <!-- Leave this container COMPLETELY EMPTY; JavaScript will automatically inject the exact number of circles needed! -->
-  <div class="nav-dots"></div>
+    </section>
 
-  <button class="arrow-btn">&gt;</button>
-</div></div>
-</section>
+    <!-- ==========================================================================
+         SLIDE 3: ACTIVITIES SECTION (Stacked Card Deck Component)
+         ========================================================================== -->
+    <section id="activities" class="activities-section">
+        <div class="activities-container">
+            <!-- JavaScript will dynamically inject your stacked layout card items here -->
+            <div class="activity-deck-wrapper">
+                <div class="activity-card current-focus">
+                    <h3>Activity Topic</h3>
+                    <p>My Source Context Details...</p>
+                    <a href="#" class="activity-contact-link">Their Contact Source</a>
+                </div>
+            </div>
+            <div class="activities-controls">
+                <button class="activity-arrow-btn prev-card">&lt;</button>
+                <button class="activity-arrow-btn next-card">&gt;</button>
+            </div>
+        </div>
+    </section>
 
-      <!-- About Section -->
-       <section id="about" class="about bg-dark">
+    <!-- ==========================================================================
+         SLIDE 4: TIMELINE SECTION (Horizontal Pull Zip-Line Track)
+         ========================================================================== -->
+    <section id="timeline" class="timeline-section">
+        <div class="timeline-zipline-container">
+            <!-- The physical horizontal zip-line running across the upper display -->
+            <div class="zipline-track">
+                <div class="timeline-clip-node" data-year="2026">2026</div>
+                <div class="timeline-clip-node" data-year="2025">2025</div>
+                <div class="timeline-clip-node" data-year="2024">2024</div>
+            </div>
+            
+            <!-- Information boxes dropping down mechanically below the track -->
+            <div class="timeline-content-display">
+                <div class="timeline-card">
+                    <h3 class="synopsis-title">Synopsis</h3>
+                    <div class="timeline-grid">
+                        <div class="biodata-box"><h4>Biodata of Place</h4><p></p></div>
+                        <div class="achievement-box"><h4>My Achievement</h4><p></p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         SLIDE 5: CONTACT & STATUS TRACKER FOOTER
+         ========================================================================== -->
+    <footer id="contact" class="footer-dashboard">
         <div class="container">
-            <h3 class="about-heading text-xl">
-                Don't just take our word for it, see the success  stories from businesses just like yours.
-            </h3>
-            <div class="about-grid">
-                <div class="card">
-                    <p>
-                        “Our business has seen a significant increase in productivity since we started using the Growth app.”
-                    </p>
-
-                    <p>Katherine Smith</p>
-                    <p>Capodopera</p>
+            <div class="contact-grid">
+                
+                <!-- LEFT SIDE: Dynamic Status Glow Block -->
+                <div class="status-panel">
+                    <div class="status-accent-strip"></div>
+                    <div class="status-content-box">
+                        <h3 class="hired-word">Let's build something next</h3>
+                        <div class="current-job-status">
+                            <span class="status-indicator-dot"></span>
+                            <p class="status-label-text">Available for Roles</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card">
-                    <p>
-                        “As a small business owner, it's important to have a tool that can help me keep track of everything. The Growth app has been a lifesaver for me, allowing me to manage my contacts, schedule appointments, and track progress all in one place..”                    </p>
-
-                    <p>Jonathan Lee</p>
-                    <p>Red Bolt</p>
+                <!-- RIGHT SIDE: Direct Communication Hub Channels -->
+                <div class="channels-panel">
+                    <h4>Connect Instantly</h4>
+                    <div class="links-row">
+                        <a href="mailto:theofficialaqwa@gmail.com" class="channel-link"><i class="fas fa-envelope"></i> Email</a>
+                        <a href="https://wa.me" target="_blank" class="channel-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://github.com" target="_blank" class="channel-link"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://linkedin.com" target="_blank" class="channel-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    </div>
                 </div>
 
-                <div class="card">
-                    <p>
-                        “The dashboards and reporting feature has provided valuable insights into our performance and helped us make data-driven decisions. It's a game changer for us.”                    </p>
-
-                    <p>David Wilson</p>
-                    <p>Slide</p>
-                </div>
             </div>
         </div>
-       </section>
-         <!-- Footer -->
-          <footer id="contact" class="footer bg-black">
-            <div class="container">
-                <div class="footer-grid">
-                    <div>
-                        <a href="index.html">
-                            <img src="images/Logo-white.png" alt="logo">
-                        </a>
-                        <div class="card">
-                            <h4>Subcribe to Newsletter</h4>
-                            <p class="text-sm">
-                                Subscribe
-                            </p>
-                            <form>
-                                <input type="email" id="email"  placeholder="Enter your email" >
-                                <button type="submit" class="btn btn-primary btn-block">Subscribe</button>
-                            </form>
-                        </div>
-                        <i class="fab fa-linkedin"></i>
-                        <i class="fab fa-twitter"></i>
-                    </div>
-                    <div>
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Our</a></li>
-                            <li><a href="#">Process</a></li>
-                            <li><a href="#">Join Our</a></li>
-                            <li><a href="#">Team</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4>Resources</h4>
-                        <ul>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Research</a></li>
-                            <li><a href="#">Recent</a></li>
-                            <li><a href="#">Projets</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4>Contact</h4>
-                        <ul>
-                            <li>
-                                <a href="#">theofficialaqwa@gmail.com</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-          </footer>
+    </footer>
 
+    <!-- Connected Module Scripts -->
     <script src="js/main.js"></script>
     <script src="js/portfolio.js"></script>
 </body>
