@@ -74,43 +74,59 @@
          SLIDE 2: PROJECT / PORTFOLIO SECTION (Kept Exactly Like Before)
          ========================================================================== -->
     <section id="portfolio">
-        <div class="portfolio-container">
-            <div class="project-topic">
-                <h2>topic</h2>
-            </div>
+    <div class="portfolio-container">
+        
+        <!-- TOPIC CONTAINER FRAME -->
+        <div class="project-topic">
+            <h2>topic</h2>
+        </div>
+        
+        <!-- MAIN CONTENT LAYER WRAPPED BY FLOATING CHEVRONS -->
+        <div class="slider-wrapper">
             
-            <div class="project-content-grid">
-                <!-- Left Column Layout: Tri-Image Display Container -->
-                <div class="media-block">
-                    <div class="main-formal-pic">
-                        <img src="images/Desktop/post 3/gambar bersama TUAN2.jpg" alt="Project Cover" />
-                    </div>
-                    <div class="sub-pic-row">
-                        <img src="images/Desktop/post 3/gambar bersama intake 8 troll.jpg" alt="Sub Preview 1" />
-                        <img src="images/Desktop/post 3/IMG_20260816_082400.jpg.jpeg" class="pic-box" alt="Sub Preview 2" />
-                    </div>
-                </div>
+            <!-- LEFT SCREEN-SIDE ARROW -->
+            <button class="arrow-btn prev-arrow">&lt;</button>
           
-                <!-- Right Column Layout: Description and Case-Study Direct Button -->
+            <!-- CENTER GRID HALVES -->
+            <div class="project-content-grid">
+                <!-- Left Box Layer: Tri-Image Layout -->
+               <!-- LEFT BOX LAYER: REARRANGED TRI-IMAGE LAYOUT -->
+<div class="media-block">
+    
+    <!-- TOP ROW: Two small images side-by-side (Pic 1 and Pic 2) -->
+    <div class="sub-pic-row">
+        <img src="images/Desktop/post 3/gambar bersama intake 8 troll.jpg" alt="Sub Preview 1" />
+        <img src="images/Desktop/post 3/IMG_20260816_082400.jpg.jpeg" class="pic-box" alt="Sub Preview 2" />
+    </div>
+
+    <!-- BOTTOM ROW: One large wide image (Formal picture) -->
+    <div class="main-formal-pic">
+        <img src="images/Desktop/post 3/gambar bersama TUAN2.jpg" alt="Wide Project Cover" />
+    </div>
+
+</div>
+
+          
+                <!-- Right Box Layer: Text Card -->
                 <div class="text-block">
                     <div class="project-details">
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                        <p></p><p></p><p></p><p></p>
                     </div>
                     <button class="show-more-btn">Show more</button>
                 </div>
             </div>
-        
-            <!-- Dynamic Navigation Circles Track Frame -->
-            <div class="slider-controls">
-                <button class="arrow-btn">&lt;</button>
-                <div class="nav-dots"></div>
-                <button class="arrow-btn">&gt;</button>
-            </div>
+
+            <!-- RIGHT SCREEN-SIDE ARROW -->
+            <button class="arrow-btn next-arrow">&gt;</button>
+            
         </div>
-    </section>
+    </div>
+
+    <!-- BOTTOM SELECTION CIRCLES (Leave empty for JS dynamic dot generation) -->
+    <div class="dots-wrapper">
+        <div class="nav-dots"></div>
+    </div>
+</section>
 
     <!-- ==========================================================================
          SLIDE 3: ACTIVITIES SECTION (Stacked Card Deck Component)
