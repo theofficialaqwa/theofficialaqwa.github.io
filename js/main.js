@@ -27,6 +27,8 @@ if (targetSection) {
   });
 });
 
+
+/*PORTFOLIO INITIALIZATION*/
 document.addEventListener("DOMContentLoaded", () => {
 
   // ==========================================================================
@@ -187,3 +189,196 @@ document.addEventListener("DOMContentLoaded", () => {
   updatePortfolioDisplay(currentSlideIndex);
 });
 
+
+/*TIMELINE INITIALIZATION*/
+document.addEventListener("DOMContentLoaded", () => {
+
+  // 1. DATA BANK MATRIX: Setup chronological data profiles here cleanly
+  const timelineData = [
+    {
+      year: "2026",
+      synopsis: "Advanced System Engineering Foundations & Core Portfolio Frameworks",
+      biodata: "Computer Science Specialization Hub, Cyberjaya Campus Network.",
+      achievement: "Perfected high-performance vanilla layout scripts. Completed full architecture map for responsive deployment states."
+    },
+    {
+      year: "2025",
+      synopsis: "Corporate Lifecycle Deployment & Full-Stack Implementation Training",
+      biodata: "Enterprise Application Development Core, Tech Labs Internship Station.",
+      achievement: "Built end-to-end checkout engines. Optimized query responses cutting database connection lag cycles cleanly down by 35%."
+    },
+    {
+      year: "2024",
+      synopsis: "Algorithmic Development Roots & Visual Layout Ideation Foundations",
+      biodata: "Software Engineering Principles Group, Academic Engineering Cluster.",
+      achievement: "Competed in Regional Hackathon Sprint brackets. Mastered absolute coordination positioning and typography system fundamentals."
+    }
+  ];
+
+  const rail = document.querySelector(".zipline-rail");
+  const displayContainer = document.querySelector(".timeline-content-display");
+
+  // 2. GENERATE TIMELINE COMPONENT NODES
+  function initTimeline() {
+    if (!rail || !displayContainer) return;
+
+    rail.innerHTML = "";
+    displayContainer.innerHTML = "";
+
+    timelineData.forEach((item, index) => {
+      // Build top clip node button
+      const clipNode = document.createElement("div");
+      clipNode.classList.add("timeline-clip-node");
+      if (index === 0) clipNode.classList.add("active");
+      clipNode.setAttribute("data-index", index);
+      clipNode.textContent = item.year;
+
+      // Build bottom panel information envelope
+      const cardDiv = document.createElement("div");
+      cardDiv.classList.add("timeline-card");
+      if (index === 0) cardDiv.classList.add("active");
+
+      cardDiv.innerHTML = `
+        <div class="synopsis-title-box">
+          <h3>Synopsis: ${item.synopsis}</h3>
+        </div>
+        <div class="timeline-grid">
+          <div class="biodata-box">
+            <h4>Biodata of Place</h4>
+            <p>${item.biodata}</p>
+          </div>
+          <div class="achievement-box">
+            <h4>My Achievement</h4>
+            <p>${item.achievement}</p>
+          </div>
+        </div>
+      `;
+
+      rail.appendChild(clipNode);
+      displayContainer.appendChild(cardDiv);
+
+      // Node selection click interaction
+      clipNode.addEventListener("click", () => {
+        switchTimelineActiveState(index);
+      });
+    });
+  }
+
+  // 3. SWITCH DATA VISIBILITY ENVELOPES
+  function switchTimelineActiveState(targetIndex) {
+    const nodes = document.querySelectorAll(".timeline-clip-node");
+    const cards = document.querySelectorAll(".timeline-card");
+
+    nodes.forEach((node, i) => {
+      node.classList.toggle("active", i === targetIndex);
+    });
+
+    cards.forEach((card, i) => {
+      if (i === targetIndex) {
+        card.style.display = "flex";
+        // Let display register block layout before applying transition pop
+        setTimeout(() => card.classList.add("active"), 10);
+      } else {
+        card.classList.remove("active");
+        card.style.display = "none";
+      }
+    });
+  }
+
+  // 4. MOUSE HORIZONTAL DRAG CONTROLLERS
+  let isDragging = false;
+  let startX;
+  let scrollLeft = 0;
+  const trackWrapper = document.querySelector(".zipline-track-wrapper");
+
+  if (trackWrapper) {
+    trackWrapper.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      startX = e.pageX - rail.offsetLeft;
+    });
+
+    trackWrapper.addEventListener("mouseleave", () => { isDragging = false; });
+    trackWrapper.addEventListener("mouseup", () => { isDragging = false; });
+
+    trackWrapper.addEventListener("mousemove", (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+      const x = e.pageX - rail.offsetLeft;
+      const walk = (x - startX) * 0.5; // Drag dampener speed calculation variable
+
+      // Cycle nodes step triggers based on drag distance thresholds
+      if (walk > 50) {
+        triggerSiblingSlide("prev");
+        isDragging = false;
+      } else if (walk < -50) {
+        triggerSiblingSlide("next");
+        isDragging = false;
+      }
+    });
+  }
+
+  function triggerSiblingSlide(direction) {
+    const activeNode = document.querySelector(".timeline-clip-node.active");
+    if (!activeNode) return;
+    
+    let currentIndex = parseInt(activeNode.getAttribute("data-index"));
+    if (direction === "next" && currentIndex < timelineData.length - 1) {
+      switchTimelineActiveState(currentIndex + 1);
+    } else if (direction === "prev" && currentIndex > 0) {
+      switchTimelineActiveState(currentIndex - 1);
+    }
+  }
+
+  initTimeline();
+});
+
+
+/*CONTACT AND STATUS INDICATORS */
+document.addEventListener("DOMContentLoaded", () => {
+
+  // ==========================================================================
+  // CONFIGURATION MANIFEST: Set your real-time status choice here!
+  // Options: "available" (Green), "busy" (Cherry Red), or "pending" (Amber Yellow)
+  // ==========================================================================
+  const currentStatusState = "available"; 
+
+  // Object mapping definitions to inject matching textual strings and states
+  const statusProfiles = {
+    available: {
+      className: "state-available",
+      hiredWord: "I am currently available! Let's build your next digital experience together.",
+      labelText: "Available for Internships / Roles"
+    },
+    busy: {
+      className: "state-busy",
+      hiredWord: "Currently managing active contracts, but my inbox is always open for future plans.",
+      labelText: "Status: Fully Booked / Busy"
+    },
+    pending: {
+      className: "state-pending",
+      hiredWord: "Reviewing ongoing proposals. Available strictly for freelance collaboration slots.",
+      labelText: "Status: Limited Availability"
+    }
+  };
+
+  const statusPanel = document.querySelector(".status-panel");
+  const hiredWordHeading = document.querySelector(".hired-word");
+  const statusLabel = document.querySelector(".status-label-text");
+
+  // State processor engine function
+  function deployStatusDashboard() {
+    if (!statusPanel || !hiredWordHeading || !statusLabel) return;
+
+    // Fetch matching layout data object criteria
+    const activeProfile = statusProfiles[currentStatusState] || statusProfiles.available;
+
+    // Flush old states and inject theme classification class rule
+    statusPanel.className = "status-panel " + activeProfile.className;
+
+    // Inject matching text values dynamically
+    hiredWordHeading.textContent = activeProfile.hiredWord;
+    statusLabel.textContent = activeProfile.labelText;
+  }
+
+  deployStatusDashboard();
+});
