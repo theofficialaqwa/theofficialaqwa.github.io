@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AQWA | Portfolio</title>
     <link rel="icon" type="image/x-icon" href="images/icon/homepage.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cloudflare.com" />
+    
+    <!-- FIX: Paste this exact long link file path address below -->
+    <script src="https://kit.fontawesome.com/9d860811fa.js" crossorigin="anonymous"></script>
+    
+    <!-- 3. PROJECT STYLESHEET -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/portfolio.css">
 </head>
+
+
 <body>
     <!-- True Absolute Top Anchor for the Home Navigation link -->
     <div id="top-of-page"></div>
@@ -129,24 +131,94 @@
 </section>
 
     <!-- ==========================================================================
-         SLIDE 3: ACTIVITIES SECTION (Stacked Card Deck Component)
-         ========================================================================== -->
-    <section id="activities" class="activities-section">
-        <div class="activities-container">
-            <!-- JavaScript will dynamically inject your stacked layout card items here -->
-            <div class="activity-deck-wrapper">
-                <div class="activity-card current-focus">
-                    <h3>Activity Topic</h3>
-                    <p>My Source Context Details...</p>
-                    <a href="#" class="activity-contact-link">Their Contact Source</a>
+     SLIDE 3: ACTIVITIES SECTION (MATCHING YOUR MOCKUP DRAWING)
+     ========================================================================== -->
+<section id="activities">
+    <div class="activities-container">
+        
+        <!-- TOP TITLE CONTAINER BLOCK -->
+        <div class="activity-topic">
+            <h2>name activities</h2>
+        </div>
+
+        <!-- UPPER LAYER: 3-IMAGE CAROUSEL TRACK WITH NESTED ARROWS -->
+        <div class="activity-carousel-wrapper">
+            <button class="activity-arrow-btn prev-activity">&lt;</button>
+            
+            <div class="activity-images-track">
+                <!-- Left Preview Image (70% Transparent) -->
+                <div class="activity-pic-box side-pic left-pic">
+                    <img src="" alt="Previous Activity">
+                </div>
+                
+                <!-- Center Primary Focus Image (Solid Opaque) -->
+                <div class="activity-pic-box center-pic">
+                    <img src="" alt="Current Activity">
+                </div>
+                
+                <!-- Right Preview Image (70% Transparent) -->
+                <div class="activity-pic-box side-pic right-pic">
+                    <img src="" alt="Next Activity">
                 </div>
             </div>
-            <div class="activities-controls">
-                <button class="activity-arrow-btn prev-card">&lt;</button>
-                <button class="activity-arrow-btn next-card">&gt;</button>
-            </div>
+
+            <button class="activity-arrow-btn next-activity">&gt;</button>
         </div>
-    </section>
+
+        <!-- LOWER LAYER: THREE-COLUMN INFOBAR GRID -->
+        <div class="activity-details-grid">
+            
+            <!-- Left Box (word) -->
+            <div class="activity-info-box word-box-left">
+                <p id="activity-word-1">word</p>
+            </div>
+            
+            <!-- Center Large Description Box (word) -->
+            <div class="activity-info-box word-box-center">
+                <p id="activity-word-2">word</p>
+            </div>
+            
+            <!-- Right Action Buttons Box Stack -->
+            <!-- RIGHT COLUMN: STACKED SOCIAL ICONS TRACK & ACTION BUTTON -->
+<!-- RIGHT COLUMN PACK: STACKED CONTAINERS IN THE SAME COLUMN -->
+<div class="activity-actions-box-wrapper">
+    
+    <!-- BOX A: MAIN SOCIAL MEDIA BOX CONTAINER -->
+    <div class="activity-actions-box">
+        <!-- THE TOP HEADER TEXT HEADER LINE -->
+        <div class="social-header-text">
+            <p>Follow them on social media</p>
+        </div>
+
+        <!-- THE RECTANGLE BLOCKS GRID MATRIX -->
+        <div class="social-matrix-grid">
+            <a href="https://facebook.com" id="link-facebook" target="_blank" class="social-rect-card fab fa-facebook-f"></a>
+            <a href="https://instagram.com" id="link-instagram" target="_blank" class="social-rect-card fab fa-instagram"></a>
+            <a href="https://tiktok.com" id="link-tiktok" target="_blank" class="social-rect-card fab fa-tiktok"></a>
+            <a href="https://x.com" id="link-x" target="_blank" class="social-rect-card fab fa-x-twitter"></a>
+            <a href="https://threads.net" id="link-threads" target="_blank" class="social-rect-card fab fa-threads"></a>
+            <a href="https://linkedin.com" id="link-linkedin" target="_blank" class="social-rect-card fab fa-linkedin-in"></a>
+            <a href="https://t.me" id="link-telegram" target="_blank" class="social-rect-card fab fa-telegram-plane"></a>
+            <a href="https://youtube.com" id="link-youtube" target="_blank" class="social-rect-card fab fa-youtube"></a>
+        </div>
+    </div>
+
+    <!-- BOX B: SEPARATE CONTAINER LOCATED UNDERNEATH FOR THE ACTION BUTTON -->
+    <div class="activity-more-button-box">
+        <a href="#" id="activity-my-view" class="act-btn btn-bottom">click here to see more</a>
+    </div>
+
+</div>
+
+
+        <!-- SLIDESHOW BUTTON TRACKS -->
+<div class="activity-dots-wrapper">
+  <div class="activity-dots"></div>
+</div>
+
+
+</section>
+
 
     <!-- ==========================================================================
          SLIDE 4: TIMELINE SECTION (Horizontal Pull Zip-Line Track)
@@ -209,6 +281,5 @@
 
     <!-- Connected Module Scripts -->
     <script src="js/main.js"></script>
-    <script src="js/portfolio.js"></script>
 </body>
 </html>

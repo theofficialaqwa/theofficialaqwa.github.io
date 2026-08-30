@@ -189,6 +189,127 @@ document.addEventListener("DOMContentLoaded", () => {
   updatePortfolioDisplay(currentSlideIndex);
 });
 
+/*ACTIVITIES INITIALIZATION*/
+document.addEventListener("DOMContentLoaded", () => {
+
+  const activitiesData = [
+    {
+      title: "CS Event Framework Workshop",
+      word1: "Workshop Mini",
+      word2: "Observed modern system configurations and collaborated inside groups to map out UI design flows.",
+      mainPic: "images/Desktop/post 3/gambar bersama TUAN2.jpg",
+      myViewUrl: "/activities-case-1",
+      fb: "https://facebook.com", ig: "https://instagram.com", tiktok: "https://tiktok.com",
+      x: "https://x.com", threads: "https://threads.net", linkedin: "https://linkedin.com", telegram: "https://t.me", youtube: "https://youtube.com"
+    },
+    {
+      title: "Software Engineering Internship",
+      word1: "Internship 2025",
+      word2: "Spent 3 months debugging front-end viewport scripts and tracking deployment pipelines.",
+      mainPic: "images/Desktop/post 2/the project.jpg",
+      myViewUrl: "/activities-case-2",
+      fb: "https://facebook.com", ig: "https://instagram.com", tiktok: "https://tiktok.com",
+      x: "https://x.com", threads: "https://threads.net", linkedin: "https://linkedin.com", telegram: "https://t.me", youtube: "https://youtube.com"
+    },
+    {
+      title: "Regional Hackathon Bracket",
+      word1: "Hackathon Entry",
+      word2: "Formed a team of 3 developers to configure structural database layers under a 48-hour limit.",
+      mainPic: "images/Desktop/post 1/website.jpg",
+      myViewUrl: "/activities-case-3",
+      fb: "https://facebook.com", ig: "https://instagram.com", tiktok: "https://tiktok.com",
+      x: "https://x.com", threads: "https://threads.net", linkedin: "https://linkedin.com", telegram: "https://t.me", youtube: "https://youtube.com"
+    }
+  ];
+
+  let activeIndex = 0;
+
+  const topicTitle = document.querySelector(".activity-topic h2");
+  const leftImg = document.querySelector(".left-pic img");
+  const centerImg = document.querySelector(".center-pic img");
+  const rightImg = document.querySelector(".right-pic img");
+  
+  const word1Paragraph = document.getElementById("activity-word-1");
+  const word2Paragraph = document.getElementById("activity-word-2");
+  const myViewLink = document.getElementById("activity-my-view");
+  
+  const dotsContainer = document.querySelector(".activity-dots");
+  const prevBtn = document.querySelector(".prev-activity");
+  const nextBtn = document.querySelector(".next-activity");
+
+  // UNIFIED DISPLAY REPLACEMENT ENGINE (Handles image, text, dots and social updates at once)
+  function syncActivitiesDisplay() {
+    const total = activitiesData.length;
+    const current = activitiesData[activeIndex];
+    if (!current) return;
+
+    const leftIndex = (activeIndex - 1 + total) % total;
+    const rightIndex = (activeIndex + 1) % total;
+
+    if (topicTitle) topicTitle.textContent = current.title;
+
+    if (leftImg) leftImg.src = activitiesData[leftIndex].mainPic;
+    if (centerImg) centerImg.src = current.mainPic;
+    if (rightImg) rightImg.src = activitiesData[rightIndex].mainPic;
+
+    if (word1Paragraph) word1Paragraph.textContent = current.word1;
+    if (word2Paragraph) word2Paragraph.innerHTML = `<strong>Description:</strong> ${current.word2}`;
+    
+    // Inject Social Media Links Dynamically
+    if (document.getElementById("link-facebook")) document.getElementById("link-facebook").href = current.fb;
+    if (document.getElementById("link-instagram")) document.getElementById("link-instagram").href = current.ig;
+    if (document.getElementById("link-tiktok")) document.getElementById("link-tiktok").href = current.tiktok;
+    if (document.getElementById("link-x")) document.getElementById("link-x").href = current.x;
+    if (document.getElementById("link-threads")) document.getElementById("link-threads").href = current.threads;
+    if (document.getElementById("link-linkedin")) document.getElementById("link-linkedin").href = current.linkedin;
+    if (document.getElementById("link-telegram")) document.getElementById("link-telegram").href = current.telegram;
+    if (document.getElementById("link-youtube")) document.getElementById("link-youtube").href = current.youtube;
+    const liveMyViewLink = document.getElementById("activity-my-view");
+    
+    if (liveMyViewLink) {
+      liveMyViewLink.href = current.myViewUrl;
+    }
+
+    // Highlighting Active Dot States
+    const dots = document.querySelectorAll(".activity-dots .dot");
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle("active", idx === activeIndex);
+    });
+  }
+
+  function initDots() {
+    if (!dotsContainer) return;
+    dotsContainer.innerHTML = "";
+    activitiesData.forEach((_, i) => {
+      const dot = document.createElement("span");
+      dot.classList.add("dot"); 
+      if (i === activeIndex) dot.classList.add("active");
+      
+      dot.addEventListener("click", () => {
+        activeIndex = i;
+        syncActivitiesDisplay();
+      });
+      dotsContainer.appendChild(dot);
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      activeIndex = (activeIndex + 1) % activitiesData.length;
+      syncActivitiesDisplay();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      activeIndex = (activeIndex - 1 + activitiesData.length) % activitiesData.length;
+      syncActivitiesDisplay();
+    });
+  }
+
+  initDots();
+  syncActivitiesDisplay();
+});
 
 /*TIMELINE INITIALIZATION*/
 document.addEventListener("DOMContentLoaded", () => {
