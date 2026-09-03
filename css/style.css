@@ -34,14 +34,15 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background: #fff;
+    background: #35393C;
+    color: #ffffff;
     overflow-x: hidden;
     margin: 0;
 }
 
 a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
 }
 
 ul {
@@ -56,7 +57,7 @@ img {
    2. STICKY NAVBAR COMPONENT
    ========================================================================== */
 .navbar {
-    background: #bdbdbd;
+    background: #35393C;
     position: sticky;
     top: 0;            
     left: 0;           
@@ -110,7 +111,7 @@ img {
 #portfolio {
     width: 100%;
     height: 100vh; 
-    background-color: #000000; 
+    background-color: #35393C; 
     display: flex;
     flex-direction: column;
     justify-content: flex-start; 
@@ -220,7 +221,7 @@ img {
     width: 160px; 
     margin-top: 10px;
     padding: 12px;
-    background-color: #111827; 
+    background-color: #35393C; 
     border: 2px solid #ffffff;
     color: #ffffff;
     font-size: 14px;
@@ -230,8 +231,8 @@ img {
 }
 
 .show-more-btn:hover {
-    background-color: #ffffff;
-    color: #000000; 
+    background-color: #35393C;
+    color: #ffffff; 
 }
 
 .arrow-btn {
@@ -299,7 +300,7 @@ img {
 #activities {
     width: 100%;
     height: 100vh;
-    background-color: #bdbdbd; 
+    background-color: #35393C; 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -325,11 +326,11 @@ img {
     border: 2px solid #1e293b;
     padding: 10px;
     text-align: center;
-    color: #1e293b;
+    color: #ffffff;
     font-size: 18px;
     font-weight: 600;
     box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #35393C;
     margin-bottom: 5px;
 }
 
@@ -353,9 +354,9 @@ img {
 .activity-pic-box {
     width: 100%;
     height: 240px; 
-    border: 2px solid #1e293b;
+    border: 2px solid #ffffff;
     overflow: hidden;
-    background-color: #cbd5e1;
+    background-color: #35393C;
     box-sizing: border-box;
     transition: all 0.4s ease;
 }
@@ -377,7 +378,7 @@ img {
     border: none;
     font-size: 64px;
     font-weight: bold;
-    color: #1e293b;
+    color: #ffffff;
     cursor: pointer;
     z-index: 10;
     user-select: none;
@@ -396,8 +397,8 @@ img {
 }
 
 .activity-info-box {
-    border: 2px solid #1e293b;
-    background-color: #cbd5e1;
+    border: 2px solid #ffffff;
+    background-color: #35393C;
     padding: 25px;
     height: 250px; /* Locked long layout presence */
     display: flex;
@@ -405,7 +406,7 @@ img {
     justify-content: center;
     text-align: center;
     font-size: 16px;
-    color: #1e293b;
+    color: #ffffff;
     box-sizing: border-box;
 }
 
@@ -422,9 +423,9 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #1e293b;
-    background-color: #cbd5e1;
-    color: #1e293b;
+    border: 2px solid #ffffff;
+    background-color: #35393C;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
@@ -434,7 +435,7 @@ img {
 }
 
 .act-btn:hover {
-    background-color: #1e293b;
+    background-color: #35393C;
     color: #ffffff;
 }
 
@@ -444,7 +445,7 @@ img {
     grid-template-columns: repeat(4, 1fr); 
     gap: 6px; 
     border: 2px solid #1e293b;
-    background-color: #cbd5e1; 
+    background-color: #35393C; 
     padding: 8px;
     box-sizing: border-box;
 }
@@ -453,15 +454,15 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.6);
-    border: 1px solid #1e293b;
+    background-color: #35393C;
+    border: 1px solid #ffffff;
     border-radius: 4px; 
     transition: all 0.2s ease;
     text-decoration: none;
 }
 
 .activity-social-icons a i {
-    color: #1e293b; 
+    color: #ffffff; 
     font-size: 18px;
     margin: 0;
     display: block;
@@ -489,7 +490,7 @@ img {
 .activity-dots .dot {
     width: 16px;
     height: 16px;
-    border: 2px solid #1e293b;
+    border: 2px solid #ffffff;
     border-radius: 50%;
     cursor: pointer;
     background-color: transparent;
@@ -499,7 +500,7 @@ img {
 }
 
 .activity-dots .dot.active {
-    background-color: #1e293b; /* Fills active slide tracker point solid charcoal */
+    background-color: #ffffff; /* Fills active slide tracker point solid charcoal */
 }
 
 /* ==========================================================================
@@ -517,8 +518,8 @@ img {
 .activity-actions-box {
     display: flex;
     flex-direction: column;
-    border: 2px solid #1e293b;
-    background-color: #cbd5e1; 
+    border: 2px solid #ffffff;
+    background-color: #35393C; 
     padding: 15px;
     height: 185px; /* Fixed height for the upper card block */
     box-sizing: border-box;
@@ -530,7 +531,7 @@ img {
     text-align: left;
     font-size: 14px;
     font-weight: 1000;
-    color: #1e293b;
+    color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -547,10 +548,10 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ffffff; 
-    border: 2px solid #1e293b;
+    background-color: #35393C; 
+    border: 2px solid #ffffff;
     border-radius: 6px; 
-    color: #1e293b !important; 
+    color: #ffffff !important; 
     font-size: 10px; 
     transition: all 0.2s ease;
     text-decoration: none;
@@ -563,7 +564,7 @@ img {
 
 /* Cursor Hover POP Actions feedback */
 .social-rect-card:hover {
-    background-color: #1e293b;
+    background-color: #35393C;
     color: #ffffff !important; 
     transform: translateY(-2px);
 }
@@ -572,8 +573,8 @@ img {
    BOX B: SEPARATE CONTAINER LOCATED UNDERNEATH FOR MORE BUTTON
    ========================================================================== */
 .activity-more-button-box {
-    border: 2px solid #1e293b;
-    background-color: #cbd5e1;
+    border: 2px solid #ffffff;
+    background-color: #35393C;
     padding: 10px;
     height: 50px; /* Fixed height container layer block */
     display: flex;
@@ -588,9 +589,9 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #1e293b;
-    background-color: #ffffff; /* Symmetrical crisp white button fill */
-    color: #1e293b;
+    border: 1px solid #ffffff;
+    background-color: #35393C; /* Symmetrical crisp dark button fill */
+    color: #ffffff;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 13px;
@@ -602,7 +603,7 @@ img {
 }
 
 .activity-more-button-box .act-btn.btn-bottom:hover {
-    background-color: #1e293b;
+    background-color: #35393C;
     color: #ffffff;
 }
 
@@ -631,15 +632,15 @@ img {
 
 /* LEFT & CENTER BOX INTERNAL STYLING */
 .activity-info-box {
-    border: 2px solid #1e293b;
-    background-color: #cbd5e1;
+    border: 2px solid #ffffff;
+    background-color: #35393C;
     padding: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     font-size: 16px;
-    color: #1e293b;
+    color: #ffffff;
     box-sizing: border-box;
 }
 
@@ -660,8 +661,8 @@ img {
 .activity-actions-box {
     display: flex;
     flex-direction: column;
-    border: 2px solid #1e293b;
-    background-color: #cbd5e1; 
+    border: 2px solid #ffffff;
+    background-color: #35393C; 
     padding: 15px;
     flex-grow: 1; /* Automatically expands to take maximum upper space */
     margin-bottom: 15px; /* Creates the clean gap split under the box */
@@ -673,7 +674,7 @@ img {
     text-align: left;
     font-size: 14px;
     font-weight: 700;
-    color: #1e293b;
+    color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 12px;
@@ -691,10 +692,10 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ffffff; 
-    border: 1px solid #1e293b;
+    background-color: #35393C; 
+    border: 1px solid #ffffff;
     border-radius: 6px; 
-    color: #1e293b !important; 
+    color: #ffffff !important; 
     font-size: 20px; 
     transition: all 0.2s ease;
     text-decoration: none;
@@ -704,7 +705,7 @@ img {
 }
 
 .social-rect-card:hover {
-    background-color: #1e293b;
+    background-color: #35393C;
     color: #ffffff !important; 
     transform: translateY(-2px);
 }
@@ -713,8 +714,8 @@ img {
    BOX B: FIXED THE WIDTH OF "CLICK HERE TO SEE MORE"
    ========================================================================== */
 .activity-more-button-box {
-    border: 2px solid #1e293b;
-    background-color: #cbd5e1;
+    border: 2px solid #ffffff;
+    background-color: #35393C;
     padding: 10px;
     height: 55px; 
     width: 100%; /* FIXED: Forces the box wrapper to span exactly 100% full width */
@@ -730,9 +731,9 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #1e293b;
-    background-color: #ffffff; 
-    color: #1e293b;
+    border: 1px solid #ffffff;
+    background-color: #35393C; 
+    color: #ffffff;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 13px;
@@ -744,7 +745,7 @@ img {
 }
 
 .activity-more-button-box .act-btn.btn-bottom:hover {
-    background-color: #1e293b;
+    background-color: #35393C;
     color: #ffffff;
 }
 
@@ -794,7 +795,7 @@ img {
 #timeline {
     width: 100%;
     height: 100vh;
-    background-color: #ffffff;
+    background-color: #35393C;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -830,7 +831,7 @@ img {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #1e293b;
+    background-color: #35393C;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
@@ -846,11 +847,11 @@ img {
 }
 
 .timeline-clip-node {
-    background-color: #ffffff;
-    border: 2px solid #1e293b;
+    background-color: #35393C;
+    border: 2px solid #ffffff;
     padding: 8px 20px;
     font-weight: 700;
-    color: #1e293b;
+    color: #ffffff;
     border-radius: 4px;
     cursor: pointer;
     user-select: none;
@@ -866,15 +867,15 @@ img {
     transform: translateX(-50%);
     width: 6px;
     height: 14px;
-    border: 2px solid #64748b;
+    border: 2px solid #ffffff;
     border-radius: 10px;
-    background-color: #cbd5e1;
+    background-color: #35393C;
 }
 /* ==========================================================================
    4. TIMELINE HORIZONTAL PROGRESSION SYSTEM
    ========================================================================== */
 .timeline-clip-node.active {
-    background-color: #1e293b;
+    background-color: #35393C;
     color: #ffffff;
     transform: scale(1.1);
 }
@@ -903,7 +904,7 @@ img {
 }
 
 .synopsis-title-box {
-    border: 2px solid #1e293b;
+    border: 2px solid #ffffff;
     padding: 15px;
     text-align: center;
 }
@@ -922,7 +923,7 @@ img {
 
 .biodata-box, 
 .achievement-box {
-    border: 2px solid #1e293b;
+    border: 2px solid #ffffff;
     padding: 30px;
     min-height: 220px;
     display: flex;
@@ -934,8 +935,8 @@ img {
 .achievement-box h4 {
     font-size: 16px;
     text-transform: uppercase;
-    color: #475569;
-    border-bottom: 1px solid #e2e8f0;
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
     padding-bottom: 8px;
 }
 
@@ -943,7 +944,7 @@ img {
 .achievement-box p {
     font-size: 15px;
     line-height: 1.6;
-    color: #1e293b;
+    color: #ffffff;
 }
 
 /* ==========================================================================
@@ -952,7 +953,7 @@ img {
 .footer-dashboard {
     width: 100%;
     min-height: 100vh;
-    background-color: #0f172a;
+    background-color: #35393C;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1003,7 +1004,7 @@ img {
 .hired-word {
     font-size: 28px;
     font-weight: 700;
-    color: #0f172a;
+    color: #000000;
     line-height: 1.3;
 }
 
@@ -1026,7 +1027,7 @@ img {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #334155;
+    color: #000000;
 }
 
 /* --- STATE A: AVAILABLE (GREEN ACCENTS) --- */
@@ -1132,7 +1133,7 @@ img {
     padding: 16px 20px;
     background-color: rgba(255, 255, 255, 0.03);
     border: 2px solid rgba(255, 255, 255, 0.1);
-    color: #cbd5e1;
+    color: #ffffff;
     font-weight: 600;
     border-radius: 8px;
     transition: all 0.2s ease;
@@ -1146,11 +1147,11 @@ img {
 
 .channel-link:hover {
     background-color: #ffffff;
-    color: #0f172a;
+    color: #ffffff;
     border-color: #ffffff;
     transform: translateY(-3px);
 }
 
 .channel-link:hover i {
-    color: #0f172a;
+    color: #ffffff;
 }
