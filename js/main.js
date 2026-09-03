@@ -311,195 +311,183 @@ document.addEventListener("DOMContentLoaded", () => {
   syncActivitiesDisplay();
 });
 
-/*TIMELINE INITIALIZATION*/
+/* ==========================================================================
+   4. MODULE 4: INTERACTIVE RESUME TIMELINE PROCESSOR (REMAKER ENGINE)
+   ========================================================================== */
 document.addEventListener("DOMContentLoaded", () => {
-
-  // 1. DATA BANK MATRIX: Setup chronological data profiles here cleanly
-  const timelineData = [
-    {
-      year: "2026",
-      synopsis: "Advanced System Engineering Foundations & Core Portfolio Frameworks",
-      biodata: "Computer Science Specialization Hub, Cyberjaya Campus Network.",
-      achievement: "Perfected high-performance vanilla layout scripts. Completed full architecture map for responsive deployment states."
-    },
-    {
-      year: "2025",
-      synopsis: "Corporate Lifecycle Deployment & Full-Stack Implementation Training",
-      biodata: "Enterprise Application Development Core, Tech Labs Internship Station.",
-      achievement: "Built end-to-end checkout engines. Optimized query responses cutting database connection lag cycles cleanly down by 35%."
-    },
-    {
-      year: "2024",
-      synopsis: "Algorithmic Development Roots & Visual Layout Ideation Foundations",
-      biodata: "Software Engineering Principles Group, Academic Engineering Cluster.",
-      achievement: "Competed in Regional Hackathon Sprint brackets. Mastered absolute coordination positioning and typography system fundamentals."
-    }
-  ];
-
-  const rail = document.querySelector(".zipline-rail");
-  const displayContainer = document.querySelector(".timeline-content-display");
-
-  // 2. GENERATE TIMELINE COMPONENT NODES
-  function initTimeline() {
-    if (!rail || !displayContainer) return;
-
-    rail.innerHTML = "";
-    displayContainer.innerHTML = "";
-
-    timelineData.forEach((item, index) => {
-      // Build top clip node button
-      const clipNode = document.createElement("div");
-      clipNode.classList.add("timeline-clip-node");
-      if (index === 0) clipNode.classList.add("active");
-      clipNode.setAttribute("data-index", index);
-      clipNode.textContent = item.year;
-
-      // Build bottom panel information envelope
-      const cardDiv = document.createElement("div");
-      cardDiv.classList.add("timeline-card");
-      if (index === 0) cardDiv.classList.add("active");
-
-      cardDiv.innerHTML = `
-        <div class="synopsis-title-box">
-          <h3>Synopsis: ${item.synopsis}</h3>
-        </div>
-        <div class="timeline-grid">
-          <div class="biodata-box">
-            <h4>Biodata of Place</h4>
-            <p>${item.biodata}</p>
-          </div>
-          <div class="achievement-box">
-            <h4>My Achievement</h4>
-            <p>${item.achievement}</p>
-          </div>
-        </div>
-      `;
-
-      rail.appendChild(clipNode);
-      displayContainer.appendChild(cardDiv);
-
-      // Node selection click interaction
-      clipNode.addEventListener("click", () => {
-        switchTimelineActiveState(index);
-      });
-    });
-  }
-
-  // 3. SWITCH DATA VISIBILITY ENVELOPES
-  function switchTimelineActiveState(targetIndex) {
-    const nodes = document.querySelectorAll(".timeline-clip-node");
-    const cards = document.querySelectorAll(".timeline-card");
-
-    nodes.forEach((node, i) => {
-      node.classList.toggle("active", i === targetIndex);
-    });
-
-    cards.forEach((card, i) => {
-      if (i === targetIndex) {
-        card.style.display = "flex";
-        // Let display register block layout before applying transition pop
-        setTimeout(() => card.classList.add("active"), 10);
-      } else {
-        card.classList.remove("active");
-        card.style.display = "none";
-      }
-    });
-  }
-
-  // 4. MOUSE HORIZONTAL DRAG CONTROLLERS
-  let isDragging = false;
-  let startX;
-  let scrollLeft = 0;
-  const trackWrapper = document.querySelector(".zipline-track-wrapper");
-
-  if (trackWrapper) {
-    trackWrapper.addEventListener("mousedown", (e) => {
-      isDragging = true;
-      startX = e.pageX - rail.offsetLeft;
-    });
-
-    trackWrapper.addEventListener("mouseleave", () => { isDragging = false; });
-    trackWrapper.addEventListener("mouseup", () => { isDragging = false; });
-
-    trackWrapper.addEventListener("mousemove", (e) => {
-      if (!isDragging) return;
-      e.preventDefault();
-      const x = e.pageX - rail.offsetLeft;
-      const walk = (x - startX) * 0.5; // Drag dampener speed calculation variable
-
-      // Cycle nodes step triggers based on drag distance thresholds
-      if (walk > 50) {
-        triggerSiblingSlide("prev");
-        isDragging = false;
-      } else if (walk < -50) {
-        triggerSiblingSlide("next");
-        isDragging = false;
-      }
-    });
-  }
-
-  function triggerSiblingSlide(direction) {
-    const activeNode = document.querySelector(".timeline-clip-node.active");
-    if (!activeNode) return;
     
-    let currentIndex = parseInt(activeNode.getAttribute("data-index"));
-    if (direction === "next" && currentIndex < timelineData.length - 1) {
-      switchTimelineActiveState(currentIndex + 1);
-    } else if (direction === "prev" && currentIndex > 0) {
-      switchTimelineActiveState(currentIndex - 1);
-    }
-  }
+    // 1. DYNAMIC REPOSITORY DATA BANK MANIFEST
+    const timelineData = [
+        { 
+          type: 'education', 
+          duration: 'Sept, 2025 - Present', 
+          sortDate: '2025-09',
+          name: 'Master of Computer Science Thesis', 
+          details: 'Focusing on advanced client-side framework deployment rules, micro-interactions code performance optimization, and responsive design systems patterns.' 
+        },
+        { 
+          type: 'education', 
+          duration: 'Jan, 2025 - June, 2025', 
+          sortDate: '2025-01',
+          name: 'Advanced UI/UX Specialization Track', 
+          details: 'Mastered absolute spatial workspace coordinate grid logic, vector graphics mapping structures, and visual communication accessibility design rules.' 
+        },
+        { 
+          type: 'experience', 
+          duration: 'June, 2024 - Dec, 2024', 
+          sortDate: '2024-06',
+          name: 'Junior Full-Stack Web Developer Internship', 
+          details: 'Collaborated alongside backend server infrastructure engineers. Participated in database pipeline connection speed audits, reducing page query response cycles cleanly.' 
+        },
+        { 
+          type: 'education', 
+          duration: 'Sept, 2020 - May, 2024', 
+          sortDate: '2020-09',
+          name: 'University Bachelor Degree Program', 
+          details: 'Completed data structures, algorithmic complexity matrices, and standard object-oriented programming foundations with high distinction metrics.' 
+        }
+    ];
 
-  initTimeline();
+    const cardsStackContainer = document.querySelector(".timeline-cards-stack");
+    
+    // Hooks directly onto your radio inputs named 'timeline-filter' inside index.html
+    const filterRadios = document.querySelectorAll('input[name="timeline-filter"]');
+
+    if (!cardsStackContainer) return;
+
+    // Chronological sorting controller: arrays items from newest down to oldest perfectly
+    const sortedTimelineData = [...timelineData].sort((a, b) => {
+        return new Date(b.sortDate) - new Date(a.sortDate);
+    });
+
+    // 2. TIMELINE CARDS AUTOMATED GENERATOR
+    function deployTimelineWorkspace() {
+        cardsStackContainer.innerHTML = ""; // Clear old nodes to completely avoid frozen interfaces
+
+        sortedTimelineData.forEach(item => {
+            const itemRow = document.createElement("div");
+            itemRow.className = "timeline-item-row";
+            itemRow.setAttribute("data-category", item.type); 
+
+            itemRow.innerHTML = `
+                <div class="timeline-clickable-card">
+                    <div class="timeline-card-top-row">
+                        <div class="card-year-badge"><p>${item.duration}</p></div>
+                        <div class="card-top-white-slice"></div>
+                    </div>
+                    <div class="card-headline-name">
+                        <h3>${item.name}</h3>
+                    </div>
+                </div>
+                <div class="timeline-hidden-details">
+                    <p>${item.details}</p>
+                </div>
+            `;
+
+            // Dropdown click listener handling top-to-bottom transparency reveal actions
+            const clickableCard = itemRow.querySelector(".timeline-clickable-card");
+            clickableCard.addEventListener("click", () => {
+                const isOpen = itemRow.classList.contains("expanded");
+                
+                // Reset other expanded rows cleanly before launching a new dropdown
+                document.querySelectorAll(".timeline-item-row.expanded").forEach(row => {
+                    row.classList.remove("expanded");
+                });
+
+                if (!isOpen) {
+                    itemRow.classList.add("expanded");
+                }
+            });
+
+            cardsStackContainer.appendChild(itemRow);
+        });
+    }
+
+    // ==========================================================================
+    // 3. REMADE: DYNAMIC ACTIVE BUTTON & RADIO CATEGORY SWITCHER
+    // ==========================================================================
+    if (filterRadios.length > 0) {
+        filterRadios.forEach(radio => {
+            radio.addEventListener("change", (e) => {
+                
+                // --- A. ACTIVE BUTTON INDICATOR SWITCHER ---
+                // Removes the active text color/circles from your old selection blocks safely
+                const allFilterLabels = document.querySelectorAll(".timeline-filters .filter-btn");
+                allFilterLabels.forEach(label => label.classList.remove("active"));
+                
+                // Finds the specific label wrapping around the checked radio button and activates it
+                const activeLabel = e.target.closest(".filter-btn");
+                if (activeLabel) {
+                    activeLabel.classList.add("active");
+                }
+
+                // --- B. CATEGORY FILTER LOGIC ---
+                // Strip case capitalizations to run calculations accurately without crashing
+                const filterValue = e.target.value.toLowerCase().trim();
+                const allRows = document.querySelectorAll(".timeline-item-row");
+
+                allRows.forEach(row => {
+                    const category = row.getAttribute("data-category").toLowerCase().trim();
+                    
+                    if (filterValue === "all" || category === filterValue) {
+                        row.classList.remove("is-hidden"); // Instantly uncovers matching milestones
+                    } else {
+                        row.classList.add("is-hidden");    // Hides non-matching categories instantly
+                        row.classList.remove("expanded"); 
+                    }
+                });
+            });
+        });
+    }
+
+    deployTimelineWorkspace();
 });
 
 
-/*CONTACT AND STATUS INDICATORS */
+/* ==========================================================================
+   5. MODULE 5: CONTACT STATUS THEME CONTROLLER ENGINE
+   ========================================================================== */
 document.addEventListener("DOMContentLoaded", () => {
-
+  
   // ==========================================================================
-  // CONFIGURATION MANIFEST: Set your real-time status choice here!
-  // Options: "available" (Green), "busy" (Cherry Red), or "pending" (Amber Yellow)
+  // CONFIGURATION VALUE: Set your availability status condition right here!
+  // Options: 
+  //   - "working"   (Changes light to GREEN + edits label text lines)
+  //   - "available" (Changes light to CHERRY RED + edits label text lines)
   // ==========================================================================
-  const currentStatusState = "available"; 
+  const currentWorkCondition = "available"; 
 
-  // Object mapping definitions to inject matching textual strings and states
-  const statusProfiles = {
+  const statusDashboardProfiles = {
+    working: {
+      themeClass: "job-state-working",
+      headlineWord: "Currently engaged on core application engineering sprints, but feel free to network!",
+      labelText: "Status: Currently Working / Occupied"
+    },
     available: {
-      className: "state-available",
-      hiredWord: "I am currently available! Let's build your next digital experience together.",
-      labelText: "Available for Internships / Roles"
-    },
-    busy: {
-      className: "state-busy",
-      hiredWord: "Currently managing active contracts, but my inbox is always open for future plans.",
-      labelText: "Status: Fully Booked / Busy"
-    },
-    pending: {
-      className: "state-pending",
-      hiredWord: "Reviewing ongoing proposals. Available strictly for freelance collaboration slots.",
-      labelText: "Status: Limited Availability"
+      themeClass: "job-state-available",
+      headlineWord: "I am actively available for new opportunities! Let's build your next app together.",
+      labelText: "Status: Not Working / Available for Roles"
     }
   };
 
-  const statusPanel = document.querySelector(".status-panel");
-  const hiredWordHeading = document.querySelector(".hired-word");
-  const statusLabel = document.querySelector(".status-label-text");
+  // DOM Layout Component Query Anchors
+  const statusContainerBox = document.querySelector(".status-card");
+  const hiredWordHeadingLine = document.querySelector(".hired-word-text");
+  const liveStatusTextLabel = document.querySelector(".status-label-text");
 
-  // State processor engine function
-  function deployStatusDashboard() {
-    if (!statusPanel || !hiredWordHeading || !statusLabel) return;
+  function processLiveStatusDashboard() {
+    if (!statusContainerBox || !hiredWordHeadingLine || !liveStatusTextLabel) return;
 
-    // Fetch matching layout data object criteria
-    const activeProfile = statusProfiles[currentStatusState] || statusProfiles.available;
+    // Fetch matching data options profiles
+    const selectedState = statusDashboardProfiles[currentWorkCondition] || statusDashboardProfiles.available;
 
-    // Flush old states and inject theme classification class rule
-    statusPanel.className = "status-panel " + activeProfile.className;
+    // Injects class status rule configurations cleanly
+    statusContainerBox.className = "contact-card status-card " + selectedState.themeClass;
 
-    // Inject matching text values dynamically
-    hiredWordHeading.textContent = activeProfile.hiredWord;
-    statusLabel.textContent = activeProfile.labelText;
+    // Replace text headings with explicit string assets dynamically inside the card rows loops
+    hiredWordHeadingLine.textContent = selectedState.headlineWord;
+    liveStatusTextLabel.textContent = selectedState.labelText;
   }
 
-  deployStatusDashboard();
+  processLiveStatusDashboard();
 });

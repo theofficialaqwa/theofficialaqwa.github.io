@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AQWA | Portfolio</title>
+    <title>AQWA</title>
     <link rel="icon" type="image/x-icon" href="images/icon/homepage.png">
+    
     
     <!-- FIX: Paste this exact long link file path address below -->
     <script src="https://kit.fontawesome.com/9d860811fa.js" crossorigin="anonymous"></script>
@@ -223,62 +224,106 @@
     <!-- ==========================================================================
          SLIDE 4: TIMELINE SECTION (Horizontal Pull Zip-Line Track)
          ========================================================================== -->
-    <section id="timeline" class="timeline-section">
-        <div class="timeline-zipline-container">
-            <!-- The physical horizontal zip-line running across the upper display -->
-            <div class="zipline-track">
-                <div class="timeline-clip-node" data-year="2026">2026</div>
-                <div class="timeline-clip-node" data-year="2025">2025</div>
-                <div class="timeline-clip-node" data-year="2024">2024</div>
+<!-- ==========================================================================
+     SLIDE 4: TIMELINE SECTION (INTERACTIVE FILTER RESUME)
+     ========================================================================== -->
+<section id="timeline">
+    <div class="timeline-container">
+        
+        <!-- UPPER FILTER RADIO SELECTION TRACK -->
+        <!-- ==========================================================================
+     SLIDE 4: FIXED TIMELINE BUTTON MARKUP
+     ========================================================================== -->
+<div class="timeline-filters">
+    
+    <label class="filter-btn active" data-filter="all">
+        <!-- FIXED: Inserted the active checked input radio button -->
+        <input type="radio" name="timeline-filter" value="all" checked class="hidden-radio-input">
+        <span class="radio-circle"></span> All
+    </label>
+    
+    <label class="filter-btn" data-filter="education">
+        <!-- FIXED: Inserted the education input radio button -->
+        <input type="radio" name="timeline-filter" value="education" class="hidden-radio-input">
+        <span class="radio-circle"></span> Education
+    </label>
+    
+    <label class="filter-btn" data-filter="experience">
+        <!-- FIXED: Inserted the experience input radio button -->
+        <input type="radio" name="timeline-filter" value="experience" class="hidden-radio-input">
+        <span class="radio-circle"></span> Experience
+    </label>
+    
+</div>
+
+
+        <!-- MAIN LAYOUT MATRIX CONTENT -->
+<div class="timeline-workspace">
+    
+    <!-- LEFT VERTICAL TIMELINE LINE -->
+    <div class="timeline-vertical-axis"></div>
+
+    <!-- RIGHT SIDE CONTENT CARDS STACK TRACK -->
+    <!-- FIXED: Leave this container COMPLETELY EMPTY; JavaScript will automatically generate and inject your sorted cards here! -->
+    <div class="timeline-cards-stack"></div>
+    
+</div>
+
+
+    </div>
+</section>
+
+<!-- ==========================================================================
+     SLIDE 5: CONTACT & LIVE STATUS DASHBOARD (50/50 SPLIT WORKSPACE)
+     ========================================================================== -->
+<footer id="contact" class="footer-dashboard">
+    <div class="contact-container">
+        
+        <!-- LEFT HALF: STACKED METRIC PANELS COLUMN -->
+        <div class="contact-left-stack">
+            
+            <!-- PANEL 1: HIRED WORD BLOCK -->
+            <div class="contact-card hired-word-card">
+                <h3 class="hired-word-text">hired word</h3>
             </div>
             
-            <!-- Information boxes dropping down mechanically below the track -->
-            <div class="timeline-content-display">
-                <div class="timeline-card">
-                    <h3 class="synopsis-title">Synopsis</h3>
-                    <div class="timeline-grid">
-                        <div class="biodata-box"><h4>Biodata of Place</h4><p></p></div>
-                        <div class="achievement-box"><h4>My Achievement</h4><p></p></div>
-                    </div>
+            <!-- PANEL 2: LIVE JOB STATUS BLOCK WITH ACCENT INDICATORS -->
+            <div class="contact-card status-card">
+                <div class="status-indicator-wrapper">
+                    <span class="status-beacon-dot"></span>
+                    <p class="status-label-text">current job status</p>
                 </div>
             </div>
+            
+            <!-- PANEL 3: COMMUNICATION NETWORKING CHANNELS WITH FONTAWESOME LOGOS -->
+            <div class="contact-card social-channels-card">
+                <div class="channels-links-list">
+                    <a href="mailto:theofficialaqwa@gmail.com" class="direct-link">
+                        <i class="fas fa-envelope"></i> email logo : email
+                    </a>
+                    <a href="https://wa.me" target="_blank" class="direct-link">
+                        <i class="fab fa-whatsapp"></i> whatsapp logo : whatsapp
+                    </a>
+                    <a href="https://github.com" target="_blank" class="direct-link">
+                        <i class="fab fa-github"></i> github logo : github.com
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="direct-link">
+                        <i class="fab fa-linkedin-in"></i> linkedin logo : linkedin
+                    </a>
+                </div>
+            </div>
+
         </div>
-    </section>
 
-    <!-- ==========================================================================
-         SLIDE 5: CONTACT & STATUS TRACKER FOOTER
-         ========================================================================== -->
-    <footer id="contact" class="footer-dashboard">
-        <div class="container">
-            <div class="contact-grid">
-                
-                <!-- LEFT SIDE: Dynamic Status Glow Block -->
-                <div class="status-panel">
-                    <div class="status-accent-strip"></div>
-                    <div class="status-content-box">
-                        <h3 class="hired-word">Let's build something next</h3>
-                        <div class="current-job-status">
-                            <span class="status-indicator-dot"></span>
-                            <p class="status-label-text">Available for Roles</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- RIGHT SIDE: Direct Communication Hub Channels -->
-                <div class="channels-panel">
-                    <h4>Connect Instantly</h4>
-                    <div class="links-row">
-                        <a href="mailto:theofficialaqwa@gmail.com" class="channel-link"><i class="fas fa-envelope"></i> Email</a>
-                        <a href="https://wa.me" target="_blank" class="channel-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                        <a href="https://github.com" target="_blank" class="channel-link"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="https://linkedin.com" target="_blank" class="channel-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    </div>
-                </div>
-
+        <!-- RIGHT HALF: ISOLATED ANIMATED CANVAS BOX (RESERVED FOR FUTURE STUFF) -->
+        <div class="contact-right-sandbox">
+            <div class="future-stuff-placeholder">
+                <p>just animated box (Please leave this space alone for the future stuff)</p>
             </div>
         </div>
-    </footer>
 
+    </div>
+</footer>
     <!-- Connected Module Scripts -->
     <script src="js/main.js"></script>
 </body>

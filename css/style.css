@@ -58,6 +58,7 @@ img {
    ========================================================================== */
 .navbar {
     background: #35393C;
+    border-bottom: 2px solid #ffffff;
     position: sticky;
     top: 0;            
     left: 0;           
@@ -323,7 +324,7 @@ img {
 
 .activity-topic {
     width: 100%;
-    border: 2px solid #1e293b;
+    border: 2px solid #ffffff;
     padding: 10px;
     text-align: center;
     color: #ffffff;
@@ -748,61 +749,210 @@ img {
     background-color: #35393C;
     color: #ffffff;
 }
-
-
-/* ==========================================================================6. FOOTER ENGINE STRUCTURE========================================================================== */
-.footer {
-    padding: 40px 0;
-}
-
-.footer h4 {
-    margin-bottom: 10px;
-}
-
-.footer ul li {
-    line-height: 2.5;
-}
-
-.footer a {
-    color: #ccc;
-}
-
-.footer i {
-    font-size: 1.5rem;
-    margin-right: 10px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer .card {
-    margin: 20px 30px 30px 0;
-}
-
-.footer input[type='email'] {
+/* ==========================================================================
+   4. TIMELINE SYSTEM - UNIFORM HEADERS & GRIDS (MATCHING MOCKUP 1 & 2)
+   ========================================================================== */
+#timeline {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 20px 0;
+    min-height: 100vh;
+    background-color: #35393C; /* Balanced dark theme background */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 65px !important; /* Fixed navbar safety offset buffer */
+    overflow-x: hidden;
 }
+
+.timeline-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Symmetrical tight spacing match to project sections */
+    box-sizing: border-box;
+}
+
+/* --- THE ALL/EDUCATION/EXPERIENCE TOP BANNER CONTAINER (MATCHING ACTIVITY TOPICS) --- */
+.timeline-filters {
+    width: 100%;
+    border: 2px solid #ffffff; 
+    padding: 10px 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    background-color: #35393C;
+    box-sizing: border-box;
+    margin-bottom: 25px; /* Creates stable spacing before cards start */
+    
+    /* FIX 2: Ensure it is static relative to the container track, removing sticky conflicts */
+    position: relative; 
+    z-index: 10;
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.2s ease;
+}
+
+.filter-btn:hover { color: #4891ff; }
+
+.radio-circle {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.filter-btn.active .radio-circle {
+    background-color: #ffffff;
+    box-shadow: inset 0 0 0 3px #35393C;
+}
+
+/* --- MAIN TIMELINE AXIS VIEWPORT SKELETON --- */
+.timeline-workspace {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 24px;
+    width: 100%;
+}
+
+.timeline-vertical-axis {
+    width: 0px;
+    height: 100%;
+    border-left: 2px dashed #ffffff;
+    justify-self: center;
+}
+
+.timeline-cards-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* ==========================================================================
+   IMAGE 1 STRUCTURAL RECONSTRUCTION (GREY MATRIX WITH WHITE TRANSLUCENT SLICE)
+   ========================================================================== */
+.timeline-clickable-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timeline-clickable-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* UPPER ROW: Grey Year Block & Translucent White Horizontal Slice */
+.timeline-card-top-row {
+    display: grid;
+    /* FIX: Widened from 200px to 240px to fit your custom date format strings perfectly! */
+    grid-template-columns: 240px 1fr; 
+    height: 38px;
+    width: 100%;
+}
+
+.card-year-badge {
+    background-color: #cbd5e1; /* Flat structural background grey panel */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #35393C;
+    font-size: 15px;
+}
+
+/* The transparent white bar spanning across row 1 */
+.card-top-white-slice {
+    background-color: transparent; /* Clean pure white fill track */
+    width: 100%;
+    height: 100%;
+}
+
+/* LOWER ROW: Large Primary Grey Title Content Panel Frame */
+.card-headline-name {
+    width: 100%;
+    height: 57px;
+    background-color: #cbd5e1; /* Symmetrical grey block fill matching drawing 1 */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #35393C;
+    font-weight: 700;
+    font-size: 18px;
+    box-sizing: border-box;
+    padding: 0 30px;
+}
+
+/* --- THE BOTTOM DETAILED INFORMATION DROPDOWN SHEET --- */
+.timeline-hidden-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.1); /* Translucent drop layer */
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    padding: 0 30px;
+    box-sizing: border-box;
+    color: #ffffff;
+    transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease, padding 0.4s ease, border-bottom 0.1s ease;
+}
+
+.timeline-item-row.expanded .timeline-hidden-details {
+    max-height: 250px;
+    opacity: 1;
+    padding: 25px 30px;
+    border-bottom: 2px solid #ffffff;
+}
+.hidden-radio-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.timeline-item-row.is-hidden {
+    display: none !important; /* Forces the browser to immediately hide filtered items */
+    opacity: 0;
+    pointer-events: none;
+}
+
+
 /* ==========================================================================7. GENERIC REUSABLE STRUCTURAL CONTAINERS========================================================================== */.container {max-width: 1100px;margin: 0 auto;padding: 0 15px;}.container-sm {max-width: 800px;margin: 0 auto;padding: 0 15px;}.card {background: #fff;color: #000;border-radius: 10px;padding: 20px;}.btn {display: inline-block;padding: 13px 20px;background: var(--light-color);color: #333;font-weight: 600;text-decoration: none;border: none;border-radius: 10px;cursor: pointer;text-align: center;transition: 0.5s;}.btn:hover {opacity: 0.8;}.btn-primary {background: var(--primary-color);color: #fff;}.btn-dark {background: var(--dark-color);color: #fff;}.btn-block {display: block;width: 100%;}.text-xxl {font-size: 3rem;line-height: 1.2;font-weight: 600;margin: 40px 0 20px;}.text-xl {font-size: 2.2rem;line-height: 1.4;font-weight: normal;margin: 40px 0 20px;}.text-lg {font-size: 1.8rem;line-height: 1.4;font-weight: normal;margin: 30px 0 20px;}.text-md {font-size: 1.2rem;line-height: 1.4;font-weight: normal;margin: 20px 0 10px;}.text-sm {font-size: 0.9rem;line-height: 1.4;font-weight: normal;margin: 10px 0 5px;}.text-center {text-align: center;}.bg-primary {background: var(--primary-color);color: #fff;}.bg-light {background: var(--light-color);color: #333;}.bg-dark {background: var(--dark-color);color: #fff;}.bg-black {background: #000;color: #fff;}.hamburger-button {display: none;background: none;border: none;cursor: pointer;padding: 10px;z-index: 1000;}.hamburger-button .hamburger-line {width: 30px;height: 3px;background: #333;margin: 6px 0;}.mobile-menu {position: fixed;top: 0;right: -300px;width: 250px;height: 100%;z-index: 100;background: #fff;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);transition: right 0.3s ease-in-out;}.mobile-menu.active {right: 0;}.mobile-menu ul {margin-top: 100px;padding-right: 10px;}.mobile-menu ul li {margin: 10px 0;}.mobile-menu ul li a {font-size: 20px;transition: 0.3s;}/* ==========================================================================TIMELINE HORIZONTAL ZIP-LINE TRACK STYLE========================================================================== */
 #timeline {
     width: 100%;
-    height: 100vh;
-    background-color: #35393C;
+    /* FIX 1: Change height from 100vh to min-height so it can expand downwards! */
+    min-height: 100vh; 
+    background-color: #35393C; /* Keeps your dark palette background */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start; /* Keeps content anchored cleanly to the top */
     align-items: center;
-    position: relative;
     box-sizing: border-box;
-    overflow: hidden;
+    padding-top: 65px !important; 
+    padding-bottom: 60px; /* Air cushioning space at the baseline floor */
+    overflow: visible; /* Allows content expansion down safely */
 }
+
 
 .timeline-zipline-container {
     width: 100%;
@@ -950,208 +1100,219 @@ img {
 /* ==========================================================================
    5. CONTACT & LIVE AVAILABILITY STATUS DASHBOARD
    ========================================================================== */
+
+/* ==========================================================================6. FOOTER ENGINE STRUCTURE========================================================================== */
+.footer {
+    padding: 40px 0;
+}
+
+.footer h4 {
+    margin-bottom: 10px;
+}
+
+.footer ul li {
+    line-height: 2.5;
+}
+
+.footer a {
+    color: #ccc;
+}
+
+.footer i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .card {
+    margin: 20px 30px 30px 0;
+}
+
+.footer input[type='email'] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+/* ==========================================================================
+   5. CONTACT & LIVE AVAILABILITY STATUS DASHBOARD
+   ========================================================================== */
 .footer-dashboard {
     width: 100%;
-    min-height: 100vh;
-    background-color: #35393C;
+    height: 100vh;
+    background-color: #35393C; /* Flat solid gray matching portfolio workspace slates */
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    padding-top: 100px;
-    padding-bottom: 60px;
-}
-
-.footer-dashboard .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-
-/* --- LEFT COLUMN PANEL: GLOW CARD --- */
-.status-panel {
-    display: flex;
-    border-radius: 12px;
+    padding-top: 65px !important; /* Fixed clearance buffer beneath navbar */
     overflow: hidden;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    height: 280px;
-    transition: all 0.5s ease;
 }
 
-.status-accent-strip {
-    width: 16px;
-    height: 100%;
-    transition: background-color 0.5s ease;
+.contact-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Exact 50/50 horizontal layout grid halves split */
+    gap: 40px;
+    align-items: stretch;
+    box-sizing: border-box;
 }
 
-.status-content-box {
-    flex-grow: 1;
-    padding: 40px;
+/* ==========================================================================
+   LEFT SIDE COLUMN: TRIPLE RECTANGLE CONTENT STACK
+   ========================================================================== */
+.contact-left-stack {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    gap: 20px; 
+    height: 560px; 
 }
 
-.hired-word {
-    font-size: 28px;
-    font-weight: 700;
-    color: #000000;
-    line-height: 1.3;
-}
-
-.current-job-status {
+.contact-card {
+    background-color: #cbd5e1; 
+    border: 2px solid #ffffff; 
+    box-sizing: border-box;
+    padding: 30px;
     display: flex;
     align-items: center;
-    gap: 12px;
 }
 
-.status-indicator-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    transition: background-color 0.5s ease;
-    position: relative;
+/* PANEL 1 SIZING: Hired Word Box */
+.hired-word-card {
+    height: 150px; /* Increased slightly to balance out the longer stretch */
 }
 
-.status-label-text {
-    font-size: 15px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #000000;
-}
-
-/* --- STATE A: AVAILABLE (GREEN ACCENTS) --- */
-.status-panel.state-available {
-    border-color: #22c55e;
-}
-
-.status-panel.state-available .status-accent-strip {
-    background-color: #22c55e;
-}
-
-.status-panel.state-available .status-content-box {
-    background-color: #f0fdf4;
-    box-shadow: 0 0 40px rgba(34, 197, 94, 0.4);
-}
-
-.status-panel.state-available .status-indicator-dot {
-    background-color: #22c55e;
-    animation: neonPulseGreen 2s infinite;
-}
-
-/* --- STATE B: BUSY (CHERRY RED ACCENTS) --- */
-.status-panel.state-busy {
-    border-color: #ef4444;
-}
-
-.status-panel.state-busy .status-accent-strip {
-    background-color: #ef4444;
-}
-
-.status-panel.state-busy .status-content-box {
-    background-color: #fef2f2;
-    box-shadow: 0 0 40px rgba(239, 68, 68, 0.4);
-}
-
-.status-panel.state-busy .status-indicator-dot {
-    background-color: #ef4444;
-    animation: neonPulseRed 2s infinite;
-}
-
-/* --- STATE C: PENDING (AMBER YELLOW ACCENTS) --- */
-.status-panel.state-pending {
-    border-color: #eab308;
-}
-
-.status-panel.state-pending .status-accent-strip {
-    background-color: #eab308;
-}
-
-.status-panel.state-pending .status-content-box {
-    background-color: #fefce8;
-    box-shadow: 0 0 40px rgba(234, 179, 8, 0.4);
-}
-
-.status-panel.state-pending .status-indicator-dot {
-    background-color: #eab308;
-    animation: neonPulseYellow 2s infinite;
-}
-
-/* --- DYNAMIC BEACON KEYFRAMES --- */
-@keyframes neonPulseGreen { 
-    0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); } 
-    50% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); } 
-}
-
-@keyframes neonPulseRed { 
-    0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); } 
-    50% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); } 
-}
-
-@keyframes neonPulseYellow { 
-    0%, 100% { box-shadow: 0 0 0 0 rgba(234, 179, 8, 0.7); } 
-    50% { box-shadow: 0 0 0 10px rgba(234, 179, 8, 0); } 
-}
-
-/* --- RIGHT COLUMN PANEL: CHANNELS --- */
-.channels-panel {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    padding-left: 20px;
-}
-
-.channels-panel h4 {
-    color: #ffffff;
+.hired-word-text {
     font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 10px;
+    font-weight: 700;
+    color: #35393C; /* Dark text text line contrast inside gray areas */
 }
 
-.links-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+/* PANEL 2 SIZING: Current Job Status Box */
+.status-card {
+    height: 100px;
+    transition: all 0.4s ease;
+}
+
+.status-indicator-wrapper {
+    display: flex;
+    align-items: center;
     gap: 15px;
 }
 
-.channel-link {
+/* Dynamic Live Beacons dots layers tracking indicator rings */
+.status-beacon-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #7c858d; /* Default waiting status color block */
+    position: relative;
+    transition: background-color 0.4s ease;
+}
+
+.status-label-text {
+    font-size: 18px;
+    font-weight: 700;
+    color: #35393C;
+}
+
+/* PANEL 3 SIZING: Social Media Icon Link Lines Stack List */
+.social-channels-card {
+    flex-grow: 1; /* Stretches dynamically to match the exact floor line of the right side box */
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+
+.channels-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+}
+
+.direct-link {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 16px 20px;
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    color: #ffffff;
+    font-size: 16px;
     font-weight: 600;
-    border-radius: 8px;
-    transition: all 0.2s ease;
+    color: #35393C !important; /* Overrides default link line colors */
+    text-decoration: none;
+    transition: transform 0.2s ease;
 }
 
-.channel-link i {
+.direct-link i {
     font-size: 20px;
-    color: #ffffff;
-    margin: 0;
+    color: #35393C;
+    width: 24px;
+    text-align: center;
 }
 
-.channel-link:hover {
-    background-color: #ffffff;
-    color: #ffffff;
-    border-color: #ffffff;
-    transform: translateY(-3px);
+.direct-link:hover {
+    transform: translateX(5px); /* Smooth layout pop feedback when focused */
 }
 
-.channel-link:hover i {
-    color: #ffffff;
+/* ==========================================================================
+   DYNAMIC JOB STATUS GLOW CONFIGURATIONS (RED / GREEN MODES)
+   ========================================================================== */
+
+/* STATE A: WORKING (Green light glow) */
+.status-card.job-state-working {
+    border-color: #22c55e; /* Vibrant Green outline frame */
+    box-shadow: 0 0 25px rgba(34, 197, 94, 0.3);
+}
+.status-card.job-state-working .status-beacon-dot {
+    background-color: #22c55e;
+    animation: beaconPulseGreen 2s infinite;
+}
+
+/* STATE B: NOT WORKING / AVAILABLE (Cherry Red light glow) */
+.status-card.job-state-available {
+    border-color: #ef4444; /* Vibrant Cherry Red outline frame */
+    box-shadow: 0 0 25px rgba(239, 68, 68, 0.3);
+}
+.status-card.job-state-available .status-beacon-dot {
+    background-color: #ef4444;
+    animation: beaconPulseRed 2s infinite;
+}
+
+/* Blinking animation tracks processor variables */
+@keyframes beaconPulseGreen { 0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); } 50% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); } }
+@keyframes beaconPulseRed { 0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); } 50% { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); } }
+
+/* ==========================================================================
+   RIGHT SIDE COLUMN: FUTURE STUFF SANDBOX RESERVED CONTAINER
+   ========================================================================== */
+.contact-right-sandbox {
+    background-color: #cbd5e1;
+    border: 2px solid #ffffff;
+    
+    /* 💡 FUTURE ADJUSTMENT SYNC POINT: Increased from 500px to 560px to match the left stack perfectly */
+    height: 560px; 
+    
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.future-stuff-placeholder p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #7f8c8d; /* Subtle layout text styling marker */
+    line-height: 1.5;
 }
