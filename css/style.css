@@ -1,9 +1,4 @@
-
-/* ==========================================================================
-   1. GLOBAL SECTION OFFSET & SYSTEM ARCHITECTURE
-   ========================================================================== */
 #home, #portfolio, #activities, #timeline, #contact {
-    /* Clear the floating header area smoothly across all slides */
     padding-top: 100px !important; 
     padding-bottom: 40px; 
     box-sizing: border-box !important; 
@@ -52,10 +47,7 @@ ul {
 img {
     max-width: 100%;
 }
-
-/* ==========================================================================
-   2. STICKY NAVBAR COMPONENT
-   ========================================================================== */
+/*1.*/
 .navbar {
     background: #35393C;
     border-bottom: 2px solid #ffffff;
@@ -82,9 +74,7 @@ img {
     color: var(--primary-color);
 }
 
-/* ==========================================================================
-   3. HOME SECTION INTERIOR LAYOUT
-   ========================================================================== */
+/*2.*/
 .home {
     padding-top: 80px;
 }
@@ -106,9 +96,7 @@ img {
     margin-bottom: 20px;
 }
 
-/* ==========================================================================
-   4. PORTFOLIO SECTION - HIGH ANCHOR & EXPANDED VERTICAL HEIGHT
-   ========================================================================== */
+/*3.*/
 #portfolio {
     width: 100%;
     height: 100vh; 
@@ -293,11 +281,7 @@ img {
     background-color: #ffffff; 
 }
 
-/* ==========================================================================
-   5. ACTIVITIES SECTION - PERFECT LANDSCAPE LAYOUT
-   ========================================================================== */
-/* FIXED: Injected official production Font Awesome core library stream */
-
+/*4.*/
 #activities {
     width: 100%;
     height: 100vh;
@@ -469,9 +453,6 @@ img {
     display: block;
 }
 
-/* ==========================================================================
-   FIXED ACTIVITIES CONTROLS RAIL (GLUED TO THE FLOOR WINDOW EDGE)
-   ========================================================================== */
 .activity-dots-wrapper {
     width: 100%;
     position: absolute;
@@ -504,9 +485,6 @@ img {
     background-color: #ffffff; /* Fills active slide tracker point solid charcoal */
 }
 
-/* ==========================================================================
-   ACTIVITIES SOCIAL SIDEBAR CONTAINER HUB
-   ========================================================================== */
 .activity-actions-box-wrapper {
     display: flex;
     flex-direction: column;
@@ -570,9 +548,6 @@ img {
     transform: translateY(-2px);
 }
 
-/* ==========================================================================
-   BOX B: SEPARATE CONTAINER LOCATED UNDERNEATH FOR MORE BUTTON
-   ========================================================================== */
 .activity-more-button-box {
     border: 2px solid #ffffff;
     background-color: #35393C;
@@ -608,9 +583,7 @@ img {
     color: #ffffff;
 }
 
-/* ==========================================================================
-   ACTIVITIES SECTION LOWER DETAILS GRID
-   ========================================================================== */
+
 .activity-details-grid {
     display: grid;
     grid-template-columns: 1fr 2.5fr 1fr; 
@@ -620,12 +593,6 @@ img {
     margin-bottom: 40px; 
 }
 
-/* 
-   ==========================================================================
-   💡 ADJUST VALUE HERE TO MAKE ALL THE LOWER BOXES LONGER OR SHORTER:
-   Change "320px" below to any number (like 350px, 400px) to grow the height!
-   ========================================================================== 
-*/
 .activity-info-box,
 .activity-actions-box-wrapper {
     height: 280px; /* INCREASED FROM 250px to make them extra longer below */
@@ -749,19 +716,18 @@ img {
     background-color: #35393C;
     color: #ffffff;
 }
-/* ==========================================================================
-   4. TIMELINE SYSTEM - UNIFORM HEADERS & GRIDS (MATCHING MOCKUP 1 & 2)
-   ========================================================================== */
+
+/*5.*/
 #timeline {
     width: 100%;
     min-height: 100vh;
-    background-color: #35393C; /* Balanced dark theme background */
+    background-color: #35393C;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     box-sizing: border-box;
-    padding-top: 65px !important; /* Fixed navbar safety offset buffer */
+    padding-top: 65px !important;
     overflow-x: hidden;
 }
 
@@ -771,14 +737,14 @@ img {
     padding: 0 120px;
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Symmetrical tight spacing match to project sections */
+    gap: 15px;
     box-sizing: border-box;
 }
 
-/* --- THE ALL/EDUCATION/EXPERIENCE TOP BANNER CONTAINER (MATCHING ACTIVITY TOPICS) --- */
+/* --- FILTERS BANNER --- */
 .timeline-filters {
     width: 100%;
-    border: 2px solid #ffffff; 
+    border: 2px solid #fff; 
     padding: 10px 30px;
     display: flex;
     justify-content: flex-start;
@@ -786,9 +752,7 @@ img {
     gap: 40px;
     background-color: #35393C;
     box-sizing: border-box;
-    margin-bottom: 25px; /* Creates stable spacing before cards start */
-    
-    /* FIX 2: Ensure it is static relative to the container track, removing sticky conflicts */
+    margin-bottom: 25px;
     position: relative; 
     z-index: 10;
 }
@@ -797,9 +761,8 @@ img {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 16px;
-    font-weight: 700;
-    color: #ffffff;
+    font: 700 16px sans-serif;
+    color: #fff;
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
@@ -812,17 +775,17 @@ img {
 .radio-circle {
     width: 16px;
     height: 16px;
-    border: 2px solid #ffffff;
+    border: 2px solid #fff;
     border-radius: 50%;
     display: inline-block;
 }
 
 .filter-btn.active .radio-circle {
-    background-color: #ffffff;
+    background-color: #fff;
     box-shadow: inset 0 0 0 3px #35393C;
 }
 
-/* --- MAIN TIMELINE AXIS VIEWPORT SKELETON --- */
+/* --- MAIN SKELETON --- */
 .timeline-workspace {
     display: grid;
     grid-template-columns: 40px 1fr;
@@ -831,9 +794,9 @@ img {
 }
 
 .timeline-vertical-axis {
-    width: 0px;
+    width: 0;
     height: 100%;
-    border-left: 2px dashed #ffffff;
+    border-left: 2px dashed #fff;
     justify-self: center;
 }
 
@@ -844,9 +807,7 @@ img {
     width: 100%;
 }
 
-/* ==========================================================================
-   IMAGE 1 STRUCTURAL RECONSTRUCTION (GREY MATRIX WITH WHITE TRANSLUCENT SLICE)
-   ========================================================================== */
+/* --- CARDS RECONSTRUCTION --- */
 .timeline-clickable-card {
     display: flex;
     flex-direction: column;
@@ -861,17 +822,15 @@ img {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* UPPER ROW: Grey Year Block & Translucent White Horizontal Slice */
 .timeline-card-top-row {
     display: grid;
-    /* FIX: Widened from 200px to 240px to fit your custom date format strings perfectly! */
     grid-template-columns: 240px 1fr; 
     height: 38px;
     width: 100%;
 }
 
 .card-year-badge {
-    background-color: #cbd5e1; /* Flat structural background grey panel */
+    background-color: #cbd5e1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -880,18 +839,16 @@ img {
     font-size: 15px;
 }
 
-/* The transparent white bar spanning across row 1 */
 .card-top-white-slice {
-    background-color: transparent; /* Clean pure white fill track */
+    background-color: transparent;
     width: 100%;
     height: 100%;
 }
 
-/* LOWER ROW: Large Primary Grey Title Content Panel Frame */
 .card-headline-name {
     width: 100%;
     height: 57px;
-    background-color: #cbd5e1; /* Symmetrical grey block fill matching drawing 1 */
+    background-color: #cbd5e1;
     display: flex;
     align-items: center;
     text-align: center;
@@ -902,17 +859,17 @@ img {
     padding: 0 30px;
 }
 
-/* --- THE BOTTOM DETAILED INFORMATION DROPDOWN SHEET --- */
+/* --- DROPDOWN SHEET --- */
 .timeline-hidden-details {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.1); /* Translucent drop layer */
-    border-left: 2px solid #ffffff;
-    border-right: 2px solid #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
     padding: 0 30px;
     box-sizing: border-box;
-    color: #ffffff;
+    color: #fff;
     transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease, padding 0.4s ease, border-bottom 0.1s ease;
 }
 
@@ -920,8 +877,9 @@ img {
     max-height: 250px;
     opacity: 1;
     padding: 25px 30px;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid #fff;
 }
+
 .hidden-radio-input {
     position: absolute;
     opacity: 0;
@@ -931,28 +889,106 @@ img {
 }
 
 .timeline-item-row.is-hidden {
-    display: none !important; /* Forces the browser to immediately hide filtered items */
+    display: none !important;
     opacity: 0;
     pointer-events: none;
 }
 
+/* --- REUSABLE CONTAINERS --- */
+.container, .container-sm {
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+}
+.container { max-width: 1100px; }
+.container-sm { max-width: 800px; }
 
-/* ==========================================================================7. GENERIC REUSABLE STRUCTURAL CONTAINERS========================================================================== */.container {max-width: 1100px;margin: 0 auto;padding: 0 15px;}.container-sm {max-width: 800px;margin: 0 auto;padding: 0 15px;}.card {background: #fff;color: #000;border-radius: 10px;padding: 20px;}.btn {display: inline-block;padding: 13px 20px;background: var(--light-color);color: #333;font-weight: 600;text-decoration: none;border: none;border-radius: 10px;cursor: pointer;text-align: center;transition: 0.5s;}.btn:hover {opacity: 0.8;}.btn-primary {background: var(--primary-color);color: #fff;}.btn-dark {background: var(--dark-color);color: #fff;}.btn-block {display: block;width: 100%;}.text-xxl {font-size: 3rem;line-height: 1.2;font-weight: 600;margin: 40px 0 20px;}.text-xl {font-size: 2.2rem;line-height: 1.4;font-weight: normal;margin: 40px 0 20px;}.text-lg {font-size: 1.8rem;line-height: 1.4;font-weight: normal;margin: 30px 0 20px;}.text-md {font-size: 1.2rem;line-height: 1.4;font-weight: normal;margin: 20px 0 10px;}.text-sm {font-size: 0.9rem;line-height: 1.4;font-weight: normal;margin: 10px 0 5px;}.text-center {text-align: center;}.bg-primary {background: var(--primary-color);color: #fff;}.bg-light {background: var(--light-color);color: #333;}.bg-dark {background: var(--dark-color);color: #fff;}.bg-black {background: #000;color: #fff;}.hamburger-button {display: none;background: none;border: none;cursor: pointer;padding: 10px;z-index: 1000;}.hamburger-button .hamburger-line {width: 30px;height: 3px;background: #333;margin: 6px 0;}.mobile-menu {position: fixed;top: 0;right: -300px;width: 250px;height: 100%;z-index: 100;background: #fff;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);transition: right 0.3s ease-in-out;}.mobile-menu.active {right: 0;}.mobile-menu ul {margin-top: 100px;padding-right: 10px;}.mobile-menu ul li {margin: 10px 0;}.mobile-menu ul li a {font-size: 20px;transition: 0.3s;}/* ==========================================================================TIMELINE HORIZONTAL ZIP-LINE TRACK STYLE========================================================================== */
+.card {
+    background: #fff;
+    color: #000;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 20px;
+    background: var(--light-color);
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.btn:hover { opacity: 0.8; }
+.btn-primary { background: var(--primary-color); color: #fff; }
+.btn-dark { background: var(--dark-color); color: #fff; }
+.btn-block { display: block; width: 100%; }
+
+.text-xxl, .text-xl, .text-lg, .text-md, .text-sm { line-height: 1.4; font-weight: normal; }
+.text-xxl { font-size: 3rem; line-height: 1.2; font-weight: 600; margin: 40px 0 20px; }
+.text-xl { font-size: 2.2rem; margin: 40px 0 20px; }
+.text-lg { font-size: 1.8rem; margin: 30px 0 20px; }
+.text-md { font-size: 1.2rem; margin: 20px 0 10px; }
+.text-sm { font-size: 0.9rem; margin: 10px 0 5px; }
+.text-center { text-align: center; }
+
+.bg-primary { background: var(--primary-color); color: #fff; }
+.bg-light { background: var(--light-color); color: #333; }
+.bg-dark { background: var(--dark-color); color: #fff; }
+.bg-black { background: #000; color: #fff; }
+
+.hamburger-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.hamburger-button .hamburger-line {
+    width: 30px;
+    height: 3px;
+    background: #333;
+    margin: 6px 0;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100%;
+    z-index: 100;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu.active { right: 0; }
+.mobile-menu ul { margin-top: 100px; padding-right: 10px; }
+.mobile-menu ul li { margin: 10px 0; }
+.mobile-menu ul li a { font-size: 20px; transition: 0.3s; }
+
+/* --- ZIP-LINE TRACK STYLE --- */
 #timeline {
     width: 100%;
-    /* FIX 1: Change height from 100vh to min-height so it can expand downwards! */
     min-height: 100vh; 
-    background-color: #35393C; /* Keeps your dark palette background */
+    background-color: #35393C;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Keeps content anchored cleanly to the top */
+    justify-content: flex-start;
     align-items: center;
     box-sizing: border-box;
     padding-top: 65px !important; 
-    padding-bottom: 60px; /* Air cushioning space at the baseline floor */
-    overflow: visible; /* Allows content expansion down safely */
+    padding-bottom: 60px;
+    overflow: visible;
 }
-
 
 .timeline-zipline-container {
     width: 100%;
@@ -973,9 +1009,7 @@ img {
     cursor: grab;
 }
 
-.zipline-track-wrapper:active {
-    cursor: grabbing;
-}
+.zipline-track-wrapper:active { cursor: grabbing; }
 
 .zipline-line {
     position: absolute;
@@ -998,10 +1032,10 @@ img {
 
 .timeline-clip-node {
     background-color: #35393C;
-    border: 2px solid #ffffff;
+    border: 2px solid #fff;
     padding: 8px 20px;
     font-weight: 700;
-    color: #ffffff;
+    color: #fff;
     border-radius: 4px;
     cursor: pointer;
     user-select: none;
@@ -1017,16 +1051,15 @@ img {
     transform: translateX(-50%);
     width: 6px;
     height: 14px;
-    border: 2px solid #ffffff;
+    border: 2px solid #fff;
     border-radius: 10px;
     background-color: #35393C;
 }
-/* ==========================================================================
-   4. TIMELINE HORIZONTAL PROGRESSION SYSTEM
-   ========================================================================== */
+
+/* --- HORIZONTAL PROGRESSION SYSTEM --- */
 .timeline-clip-node.active {
     background-color: #35393C;
-    color: #ffffff;
+    color: #fff;
     transform: scale(1.1);
 }
 
@@ -1054,7 +1087,7 @@ img {
 }
 
 .synopsis-title-box {
-    border: 2px solid #ffffff;
+    border: 2px solid #fff;
     padding: 15px;
     text-align: center;
 }
@@ -1073,7 +1106,7 @@ img {
 
 .biodata-box, 
 .achievement-box {
-    border: 2px solid #ffffff;
+    border: 2px solid #fff;
     padding: 30px;
     min-height: 220px;
     display: flex;
@@ -1085,8 +1118,8 @@ img {
 .achievement-box h4 {
     font-size: 16px;
     text-transform: uppercase;
-    color: #ffffff;
-    border-bottom: 1px solid #ffffff;
+    color: #fff;
+    border-bottom: 1px solid #fff;
     padding-bottom: 8px;
 }
 
@@ -1094,14 +1127,10 @@ img {
 .achievement-box p {
     font-size: 15px;
     line-height: 1.6;
-    color: #ffffff;
+    color: #fff;
 }
 
-/* ==========================================================================
-   5. CONTACT & LIVE AVAILABILITY STATUS DASHBOARD
-   ========================================================================== */
-
-/* ==========================================================================6. FOOTER ENGINE STRUCTURE========================================================================== */
+/*6.*/
 .footer {
     padding: 40px 0;
 }
@@ -1143,9 +1172,6 @@ img {
     margin: 20px 0;
 }
 
-/* ==========================================================================
-   5. CONTACT & LIVE AVAILABILITY STATUS DASHBOARD
-   ========================================================================== */
 .footer-dashboard {
     width: 100%;
     height: 100vh;
@@ -1169,9 +1195,6 @@ img {
     box-sizing: border-box;
 }
 
-/* ==========================================================================
-   LEFT SIDE COLUMN: TRIPLE RECTANGLE CONTENT STACK
-   ========================================================================== */
 .contact-left-stack {
     display: flex;
     flex-direction: column;

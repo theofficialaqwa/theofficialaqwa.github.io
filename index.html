@@ -5,30 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AQWA</title>
     <link rel="icon" type="image/x-icon" href="images/icon/homepage.png">
-    
-    
-    <!-- FIX: Paste this exact long link file path address below -->
     <script src="https://kit.fontawesome.com/9d860811fa.js" crossorigin="anonymous"></script>
-    
-    <!-- 3. PROJECT STYLESHEET -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-
-
 <body>
-    <!-- True Absolute Top Anchor for the Home Navigation link -->
     <div id="top-of-page"></div>
-
-    <!-- ==========================================================================
-         FIXED NAVIGATION BAR
-         ========================================================================== -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">
-                <!-- Your AQWA logo artwork goes here -->
-            </div>
-
-            <!-- Cleaned Desktop Menu Links -->
+            <div class="logo"></div>
             <div class="main-menu">
                 <ul>
                     <li><a href="#top-of-page">Home</a></li>
@@ -38,15 +22,11 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-
-            <!-- Hamburger Button for Mobile Views -->
             <button id="hamburger-button" class="hamburger-button">
                 <div class="hamburger-line"></div>
                 <div class="hamburger-line"></div>
                 <div class="hamburger-line"></div>
             </button>
-
-            <!-- Cleaned Mobile Slide Menu Links -->
             <div class="mobile-menu">
                 <ul>
                     <li><a href="#top-of-page">Home</a></li>
@@ -58,10 +38,6 @@
             </div>
         </div>
     </nav>
-
-    <!-- ==========================================================================
-         SLIDE 1: HOME SECTION
-         ========================================================================== -->
     <section id="home" class="home">
         <div class="container">
             <div class="home-content">
@@ -72,259 +48,156 @@
             </div>
         </div>
     </section>
-
-    <!-- ==========================================================================
-         SLIDE 2: PROJECT / PORTFOLIO SECTION (Kept Exactly Like Before)
-         ========================================================================== -->
     <section id="portfolio">
-    <div class="portfolio-container">
-        
-        <!-- TOPIC CONTAINER FRAME -->
-        <div class="project-topic">
-            <h2>topic</h2>
-        </div>
-        
-        <!-- MAIN CONTENT LAYER WRAPPED BY FLOATING CHEVRONS -->
-        <div class="slider-wrapper">
-            
-            <!-- LEFT SCREEN-SIDE ARROW -->
-            <button class="arrow-btn prev-arrow">&lt;</button>
-          
-            <!-- CENTER GRID HALVES -->
-            <div class="project-content-grid">
-                <!-- Left Box Layer: Tri-Image Layout -->
-               <!-- LEFT BOX LAYER: REARRANGED TRI-IMAGE LAYOUT -->
-<div class="media-block">
-    
-    <!-- TOP ROW: Two small images side-by-side (Pic 1 and Pic 2) -->
-    <div class="sub-pic-row">
-        <img src="images/Desktop/post 3/gambar bersama intake 8 troll.jpg" alt="Sub Preview 1" />
-        <img src="images/Desktop/post 3/IMG_20260816_082400.jpg.jpeg" class="pic-box" alt="Sub Preview 2" />
-    </div>
-
-    <!-- BOTTOM ROW: One large wide image (Formal picture) -->
-    <div class="main-formal-pic">
-        <img src="images/Desktop/post 3/gambar bersama TUAN2.jpg" alt="Wide Project Cover" />
-    </div>
-
-</div>
-
-          
-                <!-- Right Box Layer: Text Card -->
-                <div class="text-block">
-                    <div class="project-details">
-                        <p></p><p></p><p></p><p></p>
+        <div class="portfolio-container">
+            <div class="project-topic">
+                <h2>topic</h2>
+            </div>
+            <div class="slider-wrapper">
+                <button class="arrow-btn prev-arrow">&lt;</button>
+                <div class="project-content-grid">
+                    <div class="media-block">
+                        <div class="sub-pic-row">
+                            <img src="images/Desktop/post 3/gambar bersama intake 8 troll.jpg" alt="Sub Preview 1" />
+                            <img src="images/Desktop/post 3/IMG_20260816_082400.jpg.jpeg" class="pic-box" alt="Sub Preview 2" />
+                        </div>
+                        <div class="main-formal-pic">
+                            <img src="images/Desktop/post 3/gambar bersama TUAN2.jpg" alt="Wide Project Cover" />
+                        </div>
                     </div>
-                    <button class="show-more-btn">Show more</button>
+                    <div class="text-block">
+                        <div class="project-details">
+                            <p></p><p></p><p></p><p></p>
+                        </div>
+                        <button class="show-more-btn">Show more</button>
+                    </div>
+                </div>
+                <button class="arrow-btn next-arrow">&gt;</button>   
+            </div>
+        </div>
+        <div class="dots-wrapper">
+            <div class="nav-dots"></div>
+        </div>
+    </section>
+    <section id="activities">
+        <div class="activities-container">
+            <div class="activity-topic">
+                <h2>name activities</h2>
+            </div>
+            <div class="activity-carousel-wrapper">
+                <button class="activity-arrow-btn prev-activity">&lt;</button>
+                <div class="activity-images-track">
+                    <div class="activity-pic-box side-pic left-pic">
+                        <img src="" alt="Previous Activity">
+                    </div>
+                    <div class="activity-pic-box center-pic">
+                        <img src="" alt="Current Activity">
+                    </div>
+                    <div class="activity-pic-box side-pic right-pic">
+                        <img src="" alt="Next Activity">
+                    </div>
+                </div>
+                <button class="activity-arrow-btn next-activity">&gt;</button>
+            </div>
+            <div class="activity-details-grid">
+                <div class="activity-info-box word-box-left">
+                    <p id="activity-word-1">word</p>
+                </div>
+                <div class="activity-info-box word-box-center">
+                    <p id="activity-word-2">word</p>
+                </div>
+                <div class="activity-actions-box-wrapper">
+    
+                    <div class="activity-actions-box">
+                        <div class="social-header-text">
+                            <p>Follow them on social media</p>
+                        </div>
+
+                        <div class="social-matrix-grid">
+                            <a href="https://facebook.com" id="link-facebook" target="_blank" class="social-rect-card fab fa-facebook-f"></a>
+                            <a href="https://instagram.com" id="link-instagram" target="_blank" class="social-rect-card fab fa-instagram"></a>
+                            <a href="https://tiktok.com" id="link-tiktok" target="_blank" class="social-rect-card fab fa-tiktok"></a>
+                            <a href="https://x.com" id="link-x" target="_blank" class="social-rect-card fab fa-x-twitter"></a>
+                            <a href="https://threads.net" id="link-threads" target="_blank" class="social-rect-card fab fa-threads"></a>
+                            <a href="https://linkedin.com" id="link-linkedin" target="_blank" class="social-rect-card fab fa-linkedin-in"></a>
+                            <a href="https://t.me" id="link-telegram" target="_blank" class="social-rect-card fab fa-telegram-plane"></a>
+                            <a href="https://youtube.com" id="link-youtube" target="_blank" class="social-rect-card fab fa-youtube"></a>
+                        </div>
+                    </div>
+                    <div class="activity-more-button-box">
+                    <a href="#" id="activity-my-view" class="act-btn btn-bottom">click here to see more</a>
+                    </div>
+
+                </div>
+
+                <div class="activity-dots-wrapper">
+                    <div class="activity-dots"></div>
                 </div>
             </div>
-
-            <!-- RIGHT SCREEN-SIDE ARROW -->
-            <button class="arrow-btn next-arrow">&gt;</button>
-            
         </div>
-    </div>
+    </section>
 
-    <!-- BOTTOM SELECTION CIRCLES (Leave empty for JS dynamic dot generation) -->
-    <div class="dots-wrapper">
-        <div class="nav-dots"></div>
-    </div>
-</section>
-
-    <!-- ==========================================================================
-     SLIDE 3: ACTIVITIES SECTION (MATCHING YOUR MOCKUP DRAWING)
-     ========================================================================== -->
-<section id="activities">
-    <div class="activities-container">
-        
-        <!-- TOP TITLE CONTAINER BLOCK -->
-        <div class="activity-topic">
-            <h2>name activities</h2>
-        </div>
-
-        <!-- UPPER LAYER: 3-IMAGE CAROUSEL TRACK WITH NESTED ARROWS -->
-        <div class="activity-carousel-wrapper">
-            <button class="activity-arrow-btn prev-activity">&lt;</button>
-            
-            <div class="activity-images-track">
-                <!-- Left Preview Image (70% Transparent) -->
-                <div class="activity-pic-box side-pic left-pic">
-                    <img src="" alt="Previous Activity">
-                </div>
+    <section id="timeline">
+        <div class="timeline-container">
+            <div class="timeline-filters">
+                <label class="filter-btn active" data-filter="all">
+                    <input type="radio" name="timeline-filter" value="all" checked class="hidden-radio-input">
+                    <span class="radio-circle"></span> All
+                </label>
+    
+                <label class="filter-btn" data-filter="education">
+                    <input type="radio" name="timeline-filter" value="education" class="hidden-radio-input">
+                    <span class="radio-circle"></span> Education
+                </label>
                 
-                <!-- Center Primary Focus Image (Solid Opaque) -->
-                <div class="activity-pic-box center-pic">
-                    <img src="" alt="Current Activity">
+                <label class="filter-btn" data-filter="experience">
+                    <input type="radio" name="timeline-filter" value="experience" class="hidden-radio-input">
+                    <span class="radio-circle"></span> Experience
+                </label>
+            </div>
+            <div class="timeline-workspace">
+                <div class="timeline-vertical-axis"></div>
+                <div class="timeline-cards-stack"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer-dashboard">
+        <div class="contact-container">
+            <div class="contact-left-stack">
+                <div class="contact-card hired-word-card">
+                    <h3 class="hired-word-text">hired word</h3>
                 </div>
-                
-                <!-- Right Preview Image (70% Transparent) -->
-                <div class="activity-pic-box side-pic right-pic">
-                    <img src="" alt="Next Activity">
+                <div class="contact-card status-card">
+                    <div class="status-indicator-wrapper">
+                        <span class="status-beacon-dot"></span>
+                        <p class="status-label-text">current job status</p>
+                    </div>
                 </div>
-            </div>
-
-            <button class="activity-arrow-btn next-activity">&gt;</button>
-        </div>
-
-        <!-- LOWER LAYER: THREE-COLUMN INFOBAR GRID -->
-        <div class="activity-details-grid">
-            
-            <!-- Left Box (word) -->
-            <div class="activity-info-box word-box-left">
-                <p id="activity-word-1">word</p>
-            </div>
-            
-            <!-- Center Large Description Box (word) -->
-            <div class="activity-info-box word-box-center">
-                <p id="activity-word-2">word</p>
-            </div>
-            
-            <!-- Right Action Buttons Box Stack -->
-            <!-- RIGHT COLUMN: STACKED SOCIAL ICONS TRACK & ACTION BUTTON -->
-<!-- RIGHT COLUMN PACK: STACKED CONTAINERS IN THE SAME COLUMN -->
-<div class="activity-actions-box-wrapper">
-    
-    <!-- BOX A: MAIN SOCIAL MEDIA BOX CONTAINER -->
-    <div class="activity-actions-box">
-        <!-- THE TOP HEADER TEXT HEADER LINE -->
-        <div class="social-header-text">
-            <p>Follow them on social media</p>
-        </div>
-
-        <!-- THE RECTANGLE BLOCKS GRID MATRIX -->
-        <div class="social-matrix-grid">
-            <a href="https://facebook.com" id="link-facebook" target="_blank" class="social-rect-card fab fa-facebook-f"></a>
-            <a href="https://instagram.com" id="link-instagram" target="_blank" class="social-rect-card fab fa-instagram"></a>
-            <a href="https://tiktok.com" id="link-tiktok" target="_blank" class="social-rect-card fab fa-tiktok"></a>
-            <a href="https://x.com" id="link-x" target="_blank" class="social-rect-card fab fa-x-twitter"></a>
-            <a href="https://threads.net" id="link-threads" target="_blank" class="social-rect-card fab fa-threads"></a>
-            <a href="https://linkedin.com" id="link-linkedin" target="_blank" class="social-rect-card fab fa-linkedin-in"></a>
-            <a href="https://t.me" id="link-telegram" target="_blank" class="social-rect-card fab fa-telegram-plane"></a>
-            <a href="https://youtube.com" id="link-youtube" target="_blank" class="social-rect-card fab fa-youtube"></a>
-        </div>
-    </div>
-
-    <!-- BOX B: SEPARATE CONTAINER LOCATED UNDERNEATH FOR THE ACTION BUTTON -->
-    <div class="activity-more-button-box">
-        <a href="#" id="activity-my-view" class="act-btn btn-bottom">click here to see more</a>
-    </div>
-
-</div>
-
-
-        <!-- SLIDESHOW BUTTON TRACKS -->
-<div class="activity-dots-wrapper">
-  <div class="activity-dots"></div>
-</div>
-
-
-</section>
-
-
-    <!-- ==========================================================================
-         SLIDE 4: TIMELINE SECTION (Horizontal Pull Zip-Line Track)
-         ========================================================================== -->
-<!-- ==========================================================================
-     SLIDE 4: TIMELINE SECTION (INTERACTIVE FILTER RESUME)
-     ========================================================================== -->
-<section id="timeline">
-    <div class="timeline-container">
-        
-        <!-- UPPER FILTER RADIO SELECTION TRACK -->
-        <!-- ==========================================================================
-     SLIDE 4: FIXED TIMELINE BUTTON MARKUP
-     ========================================================================== -->
-<div class="timeline-filters">
-    
-    <label class="filter-btn active" data-filter="all">
-        <!-- FIXED: Inserted the active checked input radio button -->
-        <input type="radio" name="timeline-filter" value="all" checked class="hidden-radio-input">
-        <span class="radio-circle"></span> All
-    </label>
-    
-    <label class="filter-btn" data-filter="education">
-        <!-- FIXED: Inserted the education input radio button -->
-        <input type="radio" name="timeline-filter" value="education" class="hidden-radio-input">
-        <span class="radio-circle"></span> Education
-    </label>
-    
-    <label class="filter-btn" data-filter="experience">
-        <!-- FIXED: Inserted the experience input radio button -->
-        <input type="radio" name="timeline-filter" value="experience" class="hidden-radio-input">
-        <span class="radio-circle"></span> Experience
-    </label>
-    
-</div>
-
-
-        <!-- MAIN LAYOUT MATRIX CONTENT -->
-<div class="timeline-workspace">
-    
-    <!-- LEFT VERTICAL TIMELINE LINE -->
-    <div class="timeline-vertical-axis"></div>
-
-    <!-- RIGHT SIDE CONTENT CARDS STACK TRACK -->
-    <!-- FIXED: Leave this container COMPLETELY EMPTY; JavaScript will automatically generate and inject your sorted cards here! -->
-    <div class="timeline-cards-stack"></div>
-    
-</div>
-
-
-    </div>
-</section>
-
-<!-- ==========================================================================
-     SLIDE 5: CONTACT & LIVE STATUS DASHBOARD (50/50 SPLIT WORKSPACE)
-     ========================================================================== -->
-<footer id="contact" class="footer-dashboard">
-    <div class="contact-container">
-        
-        <!-- LEFT HALF: STACKED METRIC PANELS COLUMN -->
-        <div class="contact-left-stack">
-            
-            <!-- PANEL 1: HIRED WORD BLOCK -->
-            <div class="contact-card hired-word-card">
-                <h3 class="hired-word-text">hired word</h3>
-            </div>
-            
-            <!-- PANEL 2: LIVE JOB STATUS BLOCK WITH ACCENT INDICATORS -->
-            <div class="contact-card status-card">
-                <div class="status-indicator-wrapper">
-                    <span class="status-beacon-dot"></span>
-                    <p class="status-label-text">current job status</p>
+                <div class="contact-card social-channels-card">
+                    <div class="channels-links-list">
+                        <a href="mailto:theofficialaqwa@gmail.com" class="direct-link">
+                            <i class="fas fa-envelope"></i> email logo : email
+                        </a>
+                        <a href="https://wa.me" target="_blank" class="direct-link">
+                            <i class="fab fa-whatsapp"></i> whatsapp logo : whatsapp
+                        </a>
+                        <a href="https://github.com" target="_blank" class="direct-link">
+                            <i class="fab fa-github"></i> github logo : github.com
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="direct-link">
+                            <i class="fab fa-linkedin-in"></i> linkedin logo : linkedin
+                        </a>
+                    </div>
                 </div>
             </div>
-            
-            <!-- PANEL 3: COMMUNICATION NETWORKING CHANNELS WITH FONTAWESOME LOGOS -->
-            <div class="contact-card social-channels-card">
-                <div class="channels-links-list">
-                    <a href="mailto:theofficialaqwa@gmail.com" class="direct-link">
-                        <i class="fas fa-envelope"></i> email logo : email
-                    </a>
-                    <a href="https://wa.me" target="_blank" class="direct-link">
-                        <i class="fab fa-whatsapp"></i> whatsapp logo : whatsapp
-                    </a>
-                    <a href="https://github.com" target="_blank" class="direct-link">
-                        <i class="fab fa-github"></i> github logo : github.com
-                    </a>
-                    <a href="https://linkedin.com" target="_blank" class="direct-link">
-                        <i class="fab fa-linkedin-in"></i> linkedin logo : linkedin
-                    </a>
+            <div class="contact-right-sandbox">
+                <div class="future-stuff-placeholder">
+                    <p>just animated box (Please leave this space alone for the future stuff)</p>
                 </div>
             </div>
-
         </div>
-
-        <!-- RIGHT HALF: ISOLATED ANIMATED CANVAS BOX (RESERVED FOR FUTURE STUFF) -->
-        <div class="contact-right-sandbox">
-            <div class="future-stuff-placeholder">
-                <p>just animated box (Please leave this space alone for the future stuff)</p>
-            </div>
-        </div>
-
-    </div>
-</footer>
-    <!-- Connected Module Scripts -->
+    </footer>
     <script src="js/main.js"></script>
 </body>
 </html>
