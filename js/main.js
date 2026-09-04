@@ -30,40 +30,46 @@ if (targetSection) {
 
 /*PORTFOLIO INITIALIZATION*/
 document.addEventListener("DOMContentLoaded", () => {
-
-  // ==========================================================================
-  // 1. DATA BANK ARRAY (Add, remove, or modify project objects freely here!)
-  // ==========================================================================
   const portfolioData = [
     {
-      topic: "School Event Management System", 
-      mainFormalPic: "images/Desktop/post 1/website.jpg", 
-      subPic1: "images/Desktop/post 1/poster.jpg",
-      subPic2: "images/Desktop/post 1/coding.jpg",
+      topic: "Marketing E-Commerce Project", 
+      mainFormalPic: "images/Desktop/Portfolio/post 1 - School Project/website.jpg", 
+      subPic1: "images/Desktop/Portfolio/post 1 - School Project/poster.jpg",
+      subPic2: "images/Desktop/Portfolio/post 1 - School Project/coding.jpg",
       whyImThere: "Full-Stack Developer building an end-to-end checkout system.",
       skills: "Node.js, React, TailWind CSS, MongoDB",
       rating: "Execution: 8.5/10 - Fast 1.2s loading metrics achieved.",
-      projectUrl: "/ecommerce-case-study"
+      projectUrl: "/marketing-ecommerce-project"
     },
     {
-      topic: "CODING BOOTCAMP LANDING PAGE",
-      mainFormalPic: "images/Desktop/post 2/the project.jpg", 
-      subPic1: "images/Desktop/post 2/team member.jpg",
-      subPic2: "images/Desktop/post 2/presentation.jpeg",
+      topic: "Parking Bluetooth Application",
+      mainFormalPic: "images/Desktop/Portfolio/post 2 - Parking System/the prototype.jpeg", 
+      subPic1: "images/Desktop/Portfolio/post 2 - Parking System/arduino.jpeg",
+      subPic2: "images/Desktop/Portfolio/post 2 - Parking System/solo group.jpeg",
       whyImThere: "Lead Visual Designer creating a modern digital presence.",
       skills: "Figma, Vector Illustration, Brand Strategy",
       rating: "Execution: 9/10 - Strong high-contrast typography scaling.",
-      projectUrl: "/coding-bootcamp-landing"
+      projectUrl: "/parking-bluetooth-application"
     },
     {
-      topic: "MAJLIS PERTAULIAHAN INTAKE 8 2026",
-      mainFormalPic: "images/Desktop/post 3/gambar bersama TUAN2.jpg", 
-      subPic1: "images/Desktop/post 3/gambar bersama intake 8 troll.jpg",
-      subPic2: "images/Desktop/post 3/IMG_20260816_082400.jpg.jpeg",
-      whyImThere: "UI Engineer perfecting single-page navigation frameworks.",
-      skills: "HTML5, Vanilla CSS Grid, JavaScript Dom-Parsing",
-      rating: "Execution: 10/10 - Zero frame lag on viewport scroll actions.",
-      projectUrl: "/commissioning-ceremony"
+      topic: "Hotel Booking Platform",
+      mainFormalPic: "images/Desktop/Portfolio/post 3 - Hotel Booking System/the project.jpg", 
+      subPic1: "images/Desktop/Portfolio/post 3 - Hotel Booking System/team member.jpg",
+      subPic2: "images/Desktop/Portfolio/post 3 - Hotel Booking System/presentation.jpeg",
+      whyImThere: "Lead Visual Designer creating a modern digital presence.",
+      skills: "Figma, Vector Illustration, Brand Strategy",
+      rating: "Execution: 9/10 - Strong high-contrast typography scaling.",
+      projectUrl: "/hotel-booking-platform"
+    },
+    {
+      topic: "Hotel Management System",
+      mainFormalPic: "images/Desktop/Portfolio/post 4 - Hotel Management System/Presentation.png", 
+      subPic1: "images/Desktop/Portfolio/post 4 - Hotel Management System/team member.jpeg",
+      subPic2: "images/Desktop/Portfolio/post 4 - Hotel Management System/the data.png",
+      whyImThere: "Lead Visual Designer creating a modern digital presence.",
+      skills: "Figma, Vector Illustration, Brand Strategy",
+      rating: "Execution: 9/10 - Strong high-contrast typography scaling.",
+      projectUrl: "/hotel-management-system"
     }
   ];
 
