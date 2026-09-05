@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const activitiesData = [
     {
-      title: "CS Event Framework Workshop",
+      title: "Club Wall climbing",
       word1: "Workshop Mini",
       word2: "Observed modern system configurations and collaborated inside groups to map out UI design flows.",
       mainPic: "images/Desktop/post 3/gambar bersama TUAN2.jpg",
@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
       x: "https://x.com", threads: "https://threads.net", linkedin: "https://linkedin.com", telegram: "https://t.me", youtube: "https://youtube.com"
     },
     {
-      title: "Software Engineering Internship",
+      title: "Indoor activities",
       word1: "Internship 2025",
       word2: "Spent 3 months debugging front-end viewport scripts and tracking deployment pipelines.",
       mainPic: "images/Desktop/post 2/the project.jpg",
@@ -218,7 +218,16 @@ document.addEventListener("DOMContentLoaded", () => {
       x: "https://x.com", threads: "https://threads.net", linkedin: "https://linkedin.com", telegram: "https://t.me", youtube: "https://youtube.com"
     },
     {
-      title: "Regional Hackathon Bracket",
+      title: "Paintball @ Sepang",
+      word1: "Hackathon Entry",
+      word2: "Formed a team of 3 developers to configure structural database layers under a 48-hour limit.",
+      mainPic: "images/Desktop/post 1/website.jpg",
+      myViewUrl: "/activities-case-3",
+      fb: "https://facebook.com", ig: "https://instagram.com", tiktok: "https://tiktok.com",
+      x: "https://x.com", threads: "https://threads.net", linkedin: "https://linkedin.com", telegram: "https://t.me", youtube: "https://youtube.com"
+    },
+    {
+      title: "Majlis Pertaulihan Intake 8 2026",
       word1: "Hackathon Entry",
       word2: "Formed a team of 3 developers to configure structural database layers under a 48-hour limit.",
       mainPic: "images/Desktop/post 1/website.jpg",
