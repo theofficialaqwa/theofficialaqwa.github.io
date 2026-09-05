@@ -36,9 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
       mainFormalPic: "images/Desktop/Portfolio/post 1 - School Project/website.jpg", 
       subPic1: "images/Desktop/Portfolio/post 1 - School Project/poster.jpg",
       subPic2: "images/Desktop/Portfolio/post 1 - School Project/coding.jpg",
-      whyImThere: "Full-Stack Developer building an end-to-end checkout system.",
-      skills: "Node.js, React, TailWind CSS, MongoDB",
-      rating: "Execution: 8.5/10 - Fast 1.2s loading metrics achieved.",
+      summary: "A comprehensive e-commerce platform designed to streamline online shopping experiences.",
+      concept: "Full-Stack Developer building an end-to-end checkout system.",
+      tools: "Node.js, React, TailWind CSS, MongoDB",
+      highlight: "Execution: 8.5/10 - Fast 1.2s loading metrics achieved.",
       projectUrl: "/marketing-ecommerce-project"
     },
     {
@@ -46,9 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
       mainFormalPic: "images/Desktop/Portfolio/post 2 - Parking System/the prototype.jpeg", 
       subPic1: "images/Desktop/Portfolio/post 2 - Parking System/arduino.jpeg",
       subPic2: "images/Desktop/Portfolio/post 2 - Parking System/solo group.jpeg",
-      whyImThere: "Lead Visual Designer creating a modern digital presence.",
-      skills: "Figma, Vector Illustration, Brand Strategy",
-      rating: "Execution: 9/10 - Strong high-contrast typography scaling.",
+      summary: "A innovative solution for seamless parking management using Bluetooth technology.",
+      concept: "Lead Visual Designer creating a modern digital presence.",
+      tools: "Figma, Vector Illustration, Brand Strategy",
+      highlight: "Execution: 9/10 - Strong high-contrast typography scaling.",
       projectUrl: "/parking-bluetooth-application"
     },
     {
@@ -56,9 +58,10 @@ document.addEventListener("DOMContentLoaded", () => {
       mainFormalPic: "images/Desktop/Portfolio/post 3 - Hotel Booking System/the project.jpg", 
       subPic1: "images/Desktop/Portfolio/post 3 - Hotel Booking System/team member.jpg",
       subPic2: "images/Desktop/Portfolio/post 3 - Hotel Booking System/presentation.jpeg",
-      whyImThere: "Lead Visual Designer creating a modern digital presence.",
-      skills: "Figma, Vector Illustration, Brand Strategy",
-      rating: "Execution: 9/10 - Strong high-contrast typography scaling.",
+      summary: "A comprehensive solution for streamlined hotel bookings and reservations.",
+      concept: "Lead Visual Designer creating a modern digital presence.",
+      tools: "Figma, Vector Illustration, Brand Strategy",
+      highlight: "Execution: 9/10 - Strong high-contrast typography scaling.",
       projectUrl: "/hotel-booking-platform"
     },
     {
@@ -66,9 +69,10 @@ document.addEventListener("DOMContentLoaded", () => {
       mainFormalPic: "images/Desktop/Portfolio/post 4 - Hotel Management System/Presentation.png", 
       subPic1: "images/Desktop/Portfolio/post 4 - Hotel Management System/team member.jpeg",
       subPic2: "images/Desktop/Portfolio/post 4 - Hotel Management System/the data.png",
-      whyImThere: "Lead Visual Designer creating a modern digital presence.",
-      skills: "Figma, Vector Illustration, Brand Strategy",
-      rating: "Execution: 9/10 - Strong high-contrast typography scaling.",
+      summary: "A comprehensive solution for efficient hotel management and operations.",
+      concept: "Lead Visual Designer creating a modern digital presence.",
+      tools: "Figma, Vector Illustration, Brand Strategy",
+      highlight: "Execution: 9/10 - Strong high-contrast typography scaling.",
       projectUrl: "/hotel-management-system"
     }
   ];
@@ -78,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==========================================================================
   // 2. UI CONTAINER SELECTORS
   // ==========================================================================
-  const topicElement = document.querySelector(".project-topic h2");
+
   const mainPicImg = document.querySelector(".main-formal-pic img");
   const subPicImages = document.querySelectorAll(".sub-pic-row img");
   const textDetailsParagraphs = document.querySelectorAll(".project-details p");
@@ -117,19 +121,17 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!project) return;
 
     // Swap text headers
-    if (topicElement) topicElement.textContent = project.topic;
 
     // Swap images safely into your flipped layout configurations
     if (mainPicImg) mainPicImg.src = project.mainFormalPic;
     if (subPicImages[0]) subPicImages[0].src = project.subPic1;
     if (subPicImages[1]) subPicImages[1].src = project.subPic2;
 
-    // Swap the 4 data description block row loops
     if (textDetailsParagraphs.length >= 4) {
-      textDetailsParagraphs[0].innerHTML = `<strong>What are the topic:</strong> ${project.topic}`;
-      textDetailsParagraphs[1].innerHTML = `<strong>Why im there:</strong> ${project.whyImThere}`;
-      textDetailsParagraphs[2].innerHTML = `<strong>Few skills:</strong> ${project.skills}`;
-      textDetailsParagraphs[3].innerHTML = `<strong>How would i rate:</strong> ${project.rating}`;
+      textDetailsParagraphs[0].innerHTML = `<h3 class="section-title">${project.topic}</h3> ${project.summary}`;
+      textDetailsParagraphs[1].innerHTML = `<h3 class="section-title">Concept</h3> ${project.concept}`;
+      textDetailsParagraphs[2].innerHTML = `<h3 class="section-title">Tools</h3> ${project.tools}`;
+      textDetailsParagraphs[3].innerHTML = `<h3 class="section-title">Highlight</h3> ${project.highlight}`;
     }
 
     // Refresh dynamic lighting tracker dots
