@@ -1170,16 +1170,16 @@ img {
 
 .footer-dashboard {
     width: 100%;
-    height: 100vh;
-    background-color: #35393C; /* Flat solid gray matching portfolio workspace slates */
+    min-height: 100vh; /* Changed from height: 100vh to avoid clipping the new footer beneath it */
+    background-color: #35393C; 
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    padding-top: 65px !important; /* Fixed clearance buffer beneath navbar */
+    padding-top: 100px !important; /* Unified with your other main sections padding */
+    padding-bottom: 60px;
     overflow: hidden;
 }
-
 .contact-container {
     width: 100%;
     max-width: 1440px;
@@ -1334,4 +1334,14 @@ img {
     font-weight: 600;
     color: #7f8c8d; /* Subtle layout text styling marker */
     line-height: 1.5;
+}
+
+.site-footer {
+    width: 100%;
+    background-color: #111111; /* Distinct darker tone for the true page base */
+    color: #ffffff;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 14px;
+    border-top: 2px solid #ffffff;
 }

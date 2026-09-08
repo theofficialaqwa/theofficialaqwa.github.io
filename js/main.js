@@ -229,6 +229,24 @@ document.addEventListener("DOMContentLoaded", () => {
       x: "https://x.com", threads: "https://threads.net", linkedin: "https://linkedin.com", telegram: "https://t.me", youtube: "https://youtube.com"
     },
     {
+      title: "Minggu Destinasi Siswa UiTM 2025",
+      word1: "Hackathon Entry",
+      word2: "Formed a team of 3 developers to configure structural database layers under a 48-hour limit.",
+      mainPic: "images/Desktop/post 1/website.jpg",
+      myViewUrl: "/activities-case-3",
+      fb: "https://facebook.com", ig: "https://instagram.com", tiktok: "https://tiktok.com",
+      x: "https://x.com", threads: "https://threads.net", linkedin: "https://linkedin.com", telegram: "https://t.me", youtube: "https://youtube.com"
+    },
+    {
+      title: "Permilihan Anggoto Kor-Siswa Bomba Intake 10",
+      word1: "Hackathon Entry",
+      word2: "Formed a team of 3 developers to configure structural database layers under a 48-hour limit.",
+      mainPic: "images/Desktop/post 1/website.jpg",
+      myViewUrl: "/activities-case-3",
+      fb: "https://facebook.com", ig: "https://instagram.com", tiktok: "https://tiktok.com",
+      x: "https://x.com", threads: "https://threads.net", linkedin: "https://linkedin.com", telegram: "https://t.me", youtube: "https://youtube.com"
+    },
+    {
       title: "Majlis Pertaulihan Intake 8 2026",
       word1: "Hackathon Entry",
       word2: "Formed a team of 3 developers to configure structural database layers under a 48-hour limit.",
